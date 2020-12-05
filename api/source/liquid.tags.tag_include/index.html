@@ -1,0 +1,1210 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>liquid.tags.tag_include - liquidpy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#liquidtagstag_include" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="liquidpy" class="md-header-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            liquidpy
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              liquid.tags.tag_include
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="liquidpy" class="md-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    liquidpy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../additional_tags/" class="md-nav__link">
+      Additional Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags/" class="md-nav__link">
+      Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../filters/" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../extending/" class="md-nav__link">
+      Extending liquidpy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+    <label class="md-nav__link" for="nav-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" >
+    <label class="md-nav__link" for="nav-8-1">
+      liquid
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        liquid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid/" class="md-nav__link">
+      liquid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.parser/" class="md-nav__link">
+      liquid.parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.utils/" class="md-nav__link">
+      liquid.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.nodes/" class="md-nav__link">
+      liquid.nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.liquid/" class="md-nav__link">
+      liquid.liquid
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2" >
+    <label class="md-nav__link" for="nav-8-2">
+      liquid.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags/" class="md-nav__link">
+      liquid.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_when/" class="md-nav__link">
+      liquid.tags.tag_when
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_extends/" class="md-nav__link">
+      liquid.tags.tag_extends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_increment/" class="md-nav__link">
+      liquid.tags.tag_increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_comment/" class="md-nav__link">
+      liquid.tags.tag_comment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_block/" class="md-nav__link">
+      liquid.tags.tag_block
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_else/" class="md-nav__link">
+      liquid.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_elsif/" class="md-nav__link">
+      liquid.tags.tag_elsif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__literal/" class="md-nav__link">
+      liquid.tags.tag__literal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__end/" class="md-nav__link">
+      liquid.tags.tag__end
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_break/" class="md-nav__link">
+      liquid.tags.tag_break
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_continue/" class="md-nav__link">
+      liquid.tags.tag_continue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_include/" class="md-nav__link">
+      liquid.tags.tag_include
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_raw/" class="md-nav__link">
+      liquid.tags.tag_raw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__root/" class="md-nav__link">
+      liquid.tags.tag__root
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_capture/" class="md-nav__link">
+      liquid.tags.tag_capture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_unless/" class="md-nav__link">
+      liquid.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_cycle/" class="md-nav__link">
+      liquid.tags.tag_cycle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_if/" class="md-nav__link">
+      liquid.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_case/" class="md-nav__link">
+      liquid.tags.tag_case
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_for/" class="md-nav__link">
+      liquid.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_assign/" class="md-nav__link">
+      liquid.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_decrement/" class="md-nav__link">
+      liquid.tags.tag_decrement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_config/" class="md-nav__link">
+      liquid.tags.tag_config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.transformer/" class="md-nav__link">
+      liquid.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_tablerow/" class="md-nav__link">
+      liquid.tags.tag_tablerow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.manager/" class="md-nav__link">
+      liquid.tags.manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__output/" class="md-nav__link">
+      liquid.tags.tag__output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag/" class="md-nav__link">
+      liquid.tags.tag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.grammar/" class="md-nav__link">
+      liquid.tags.grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.config/" class="md-nav__link">
+      liquid.config
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" >
+    <label class="md-nav__link" for="nav-8-3">
+      liquid.python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python/" class="md-nav__link">
+      liquid.python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.parser/" class="md-nav__link">
+      liquid.python.parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" >
+    <label class="md-nav__link" for="nav-8-4">
+      liquid.python.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags/" class="md-nav__link">
+      liquid.python.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_while/" class="md-nav__link">
+      liquid.python.tags.tag_while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_python/" class="md-nav__link">
+      liquid.python.tags.tag_python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_else/" class="md-nav__link">
+      liquid.python.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_from/" class="md-nav__link">
+      liquid.python.tags.tag_from
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_unless/" class="md-nav__link">
+      liquid.python.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_if/" class="md-nav__link">
+      liquid.python.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_for/" class="md-nav__link">
+      liquid.python.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag__inherited/" class="md-nav__link">
+      liquid.python.tags.tag__inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_assign/" class="md-nav__link">
+      liquid.python.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_import/" class="md-nav__link">
+      liquid.python.tags.tag_import
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.inherited/" class="md-nav__link">
+      liquid.python.tags.inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.transformer/" class="md-nav__link">
+      liquid.python.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.filters/" class="md-nav__link">
+      liquid.python.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.filters/" class="md-nav__link">
+      liquid.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.exceptions/" class="md-nav__link">
+      liquid.exceptions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelog/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">liquid.tags.</span><span class="mkapi-object-name">tag_include</span>
+<span id="liquid.tags.tag_include"></span><a class="mkapi-docs-link" href="../../liquid.tags.tag_include">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Tag include</span>
+
+<span class="sd">```liquid</span>
+<span class="sd">{% include ... %}</span>
+<span class="sd">```</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">diot</span> <span class="kn">import</span> <span class="n">Diot</span>
+<span class="kn">from</span> <span class="nn">lark</span> <span class="kn">import</span> <span class="n">v_args</span>
+<span class="kn">from</span> <span class="nn">.manager</span> <span class="kn">import</span> <span class="n">tag_manager</span>
+<span class="kn">from</span> <span class="nn">.tag</span> <span class="kn">import</span> <span class="n">Tag</span>
+<span class="kn">from</span> <span class="nn">.transformer</span> <span class="kn">import</span> <span class="n">TagTransformer</span><span class="p">,</span> <span class="n">render_segment</span>
+<span class="kn">from</span> <span class="nn">..utils</span> <span class="kn">import</span> <span class="n">template_meta</span><span class="p">,</span> <span class="n">find_template</span>
+<span class="kn">from</span> <span class="nn">..exceptions</span> <span class="kn">import</span> <span class="n">LiquidSyntaxError</span>
+
+<span class="nd">@v_args</span><span class="p">(</span><span class="n">inline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">TagIncludeTransformer</span><span class="p">(</span><span class="n">TagTransformer</span><span class="p">):</span><span id="liquid.tags.tag_include.TagIncludeTransformer"></span><a class="mkapi-docs-link" title="liquid.tags.tag_include.TagIncludeTransformer" href="../../liquid.tags.tag_include/#liquid.tags.tag_include.TagIncludeTransformer">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The transformer for tag include&quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=no-self-use</span>
+    <span class="k">def</span> <span class="nf">include_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">varname</span><span class="p">,</span> <span class="n">test</span><span class="p">):</span><span id="liquid.tags.tag_include.TagIncludeTransformer.include_item"></span><a class="mkapi-docs-link" title="liquid.tags.tag_include.TagIncludeTransformer.include_item" href="../../liquid.tags.tag_include/#liquid.tags.tag_include.TagIncludeTransformer.include_item">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Transform include_item rule&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">varname</span><span class="p">),</span> <span class="n">test</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">tag_include</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="o">*</span><span class="n">items</span><span class="p">):</span><span id="liquid.tags.tag_include.TagIncludeTransformer.tag_include"></span><a class="mkapi-docs-link" title="liquid.tags.tag_include.TagIncludeTransformer.tag_include" href="../../liquid.tags.tag_include/#liquid.tags.tag_include.TagIncludeTransformer.tag_include">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Transform tag_include&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">items</span><span class="p">)</span>
+
+<span class="nd">@tag_manager</span><span class="o">.</span><span class="n">register</span>
+<span class="k">class</span> <span class="nc">TagInclude</span><span class="p">(</span><span class="n">Tag</span><span class="p">):</span><span id="liquid.tags.tag_include.TagInclude"></span><a class="mkapi-docs-link" title="liquid.tags.tag_include.TagInclude" href="../../liquid.tags.tag_include/#liquid.tags.tag_include.TagInclude">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The extends tag&quot;&quot;&quot;</span>
+    <span class="n">VOID</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">START</span> <span class="o">=</span> <span class="s1">&#39;tag_include&#39;</span>
+    <span class="n">GRAMMAR</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    tag_include: (string|/[^</span><span class="se">\\</span><span class="s2">s]+/) (include_item)*</span>
+<span class="s2">    include_item: varname &quot;=&quot; test</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="n">TRANSFORMER</span> <span class="o">=</span> <span class="n">TagIncludeTransformer</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span><span id="liquid.tags.tag_include.TagInclude.parse"></span><a class="mkapi-docs-link" title="liquid.tags.tag_include.TagInclude.parse" href="../../liquid.tags.tag_include/#liquid.tags.tag_include.TagInclude.parse">DOCS</a>
+        <span class="c1"># type: (bool) -&gt; None</span>
+        <span class="sd">&quot;&quot;&quot;Parse the include template&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">force</span><span class="p">):</span>
+            <span class="k">return</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parsed</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># pylint: disable=access-member-before-definition</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">include_template</span> <span class="o">=</span> <span class="n">find_template</span><span class="p">(</span>
+                <span class="n">path</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">include_dir</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">include_template</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">include_template</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="ne">OSError</span>
+        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">LiquidSyntaxError</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s1">&#39;Cannot find template: </span><span class="si">{</span><span class="n">path</span><span class="si">!r}</span><span class="s1"> (</span><span class="si">{</span><span class="bp">self</span><span class="si">!r}</span><span class="s1">)&#39;</span><span class="p">,</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parser</span>
+            <span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+
+        <span class="n">meta</span> <span class="o">=</span> <span class="n">template_meta</span><span class="p">(</span><span class="n">include_template</span><span class="p">)</span>
+
+        <span class="n">inc_parser</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span>
+            <span class="n">meta</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">config</span><span class="p">,</span>
+            <span class="n">Diot</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">meta</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                 <span class="n">stream</span><span class="o">=</span><span class="n">meta</span><span class="o">.</span><span class="n">stream</span><span class="p">,</span>
+                 <span class="n">path</span><span class="o">=</span><span class="n">meta</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+                 <span class="n">colno</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                 <span class="n">lineno</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+                 <span class="n">level</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="n">inc_parser</span><span class="o">.</span><span class="n">parse</span><span class="p">()</span>
+        <span class="n">inc_parser</span><span class="o">.</span><span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parser</span>
+        <span class="n">inc_parser</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">update_logger</span><span class="p">()</span>
+        <span class="c1"># pylint: disable=attribute-defined-outside-init</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parsed</span> <span class="o">=</span> <span class="n">inc_parser</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parsed</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">_render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span>
+        <span class="c1"># type: (dict, dict) -&gt; str</span>
+        <span class="n">inc_parser</span><span class="p">,</span> <span class="n">items</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">parsed</span>
+        <span class="n">items</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">items</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">varname</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">items</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">items</span><span class="p">[</span><span class="n">varname</span><span class="p">]</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+
+        <span class="n">local_vars_copy</span> <span class="o">=</span> <span class="n">local_vars</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">local_vars_copy</span><span class="p">[</span><span class="s1">&#39;include&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">items</span>
+
+        <span class="k">return</span> <span class="n">inc_parser</span><span class="o">.</span><span class="n">visitor</span><span class="o">.</span><span class="n">root</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">local_vars_copy</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre></div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>

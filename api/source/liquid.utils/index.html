@@ -1,0 +1,1437 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>liquid.utils - liquidpy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#liquidutils" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="liquidpy" class="md-header-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            liquidpy
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              liquid.utils
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="liquidpy" class="md-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    liquidpy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../additional_tags/" class="md-nav__link">
+      Additional Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags/" class="md-nav__link">
+      Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../filters/" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../extending/" class="md-nav__link">
+      Extending liquidpy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+    <label class="md-nav__link" for="nav-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" >
+    <label class="md-nav__link" for="nav-8-1">
+      liquid
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        liquid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid/" class="md-nav__link">
+      liquid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.parser/" class="md-nav__link">
+      liquid.parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.utils/" class="md-nav__link">
+      liquid.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.nodes/" class="md-nav__link">
+      liquid.nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.liquid/" class="md-nav__link">
+      liquid.liquid
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2" >
+    <label class="md-nav__link" for="nav-8-2">
+      liquid.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags/" class="md-nav__link">
+      liquid.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_when/" class="md-nav__link">
+      liquid.tags.tag_when
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_extends/" class="md-nav__link">
+      liquid.tags.tag_extends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_increment/" class="md-nav__link">
+      liquid.tags.tag_increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_comment/" class="md-nav__link">
+      liquid.tags.tag_comment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_block/" class="md-nav__link">
+      liquid.tags.tag_block
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_else/" class="md-nav__link">
+      liquid.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_elsif/" class="md-nav__link">
+      liquid.tags.tag_elsif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__literal/" class="md-nav__link">
+      liquid.tags.tag__literal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__end/" class="md-nav__link">
+      liquid.tags.tag__end
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_break/" class="md-nav__link">
+      liquid.tags.tag_break
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_continue/" class="md-nav__link">
+      liquid.tags.tag_continue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_include/" class="md-nav__link">
+      liquid.tags.tag_include
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_raw/" class="md-nav__link">
+      liquid.tags.tag_raw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__root/" class="md-nav__link">
+      liquid.tags.tag__root
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_capture/" class="md-nav__link">
+      liquid.tags.tag_capture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_unless/" class="md-nav__link">
+      liquid.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_cycle/" class="md-nav__link">
+      liquid.tags.tag_cycle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_if/" class="md-nav__link">
+      liquid.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_case/" class="md-nav__link">
+      liquid.tags.tag_case
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_for/" class="md-nav__link">
+      liquid.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_assign/" class="md-nav__link">
+      liquid.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_decrement/" class="md-nav__link">
+      liquid.tags.tag_decrement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_config/" class="md-nav__link">
+      liquid.tags.tag_config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.transformer/" class="md-nav__link">
+      liquid.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_tablerow/" class="md-nav__link">
+      liquid.tags.tag_tablerow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.manager/" class="md-nav__link">
+      liquid.tags.manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__output/" class="md-nav__link">
+      liquid.tags.tag__output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag/" class="md-nav__link">
+      liquid.tags.tag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.grammar/" class="md-nav__link">
+      liquid.tags.grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.config/" class="md-nav__link">
+      liquid.config
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" >
+    <label class="md-nav__link" for="nav-8-3">
+      liquid.python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python/" class="md-nav__link">
+      liquid.python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.parser/" class="md-nav__link">
+      liquid.python.parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" >
+    <label class="md-nav__link" for="nav-8-4">
+      liquid.python.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags/" class="md-nav__link">
+      liquid.python.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_while/" class="md-nav__link">
+      liquid.python.tags.tag_while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_python/" class="md-nav__link">
+      liquid.python.tags.tag_python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_else/" class="md-nav__link">
+      liquid.python.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_from/" class="md-nav__link">
+      liquid.python.tags.tag_from
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_unless/" class="md-nav__link">
+      liquid.python.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_if/" class="md-nav__link">
+      liquid.python.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_for/" class="md-nav__link">
+      liquid.python.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag__inherited/" class="md-nav__link">
+      liquid.python.tags.tag__inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_assign/" class="md-nav__link">
+      liquid.python.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_import/" class="md-nav__link">
+      liquid.python.tags.tag_import
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.inherited/" class="md-nav__link">
+      liquid.python.tags.inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.transformer/" class="md-nav__link">
+      liquid.python.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.filters/" class="md-nav__link">
+      liquid.python.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.filters/" class="md-nav__link">
+      liquid.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.exceptions/" class="md-nav__link">
+      liquid.exceptions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelog/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">liquid.</span><span class="mkapi-object-name">utils</span>
+<span id="liquid.utils"></span><a class="mkapi-docs-link" href="../../liquid.utils">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Utilities for liquidpy&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span> <span class="nn">textwrap</span> <span class="kn">import</span> <span class="n">shorten</span> <span class="k">as</span> <span class="n">tw_shorten</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<span class="kn">from</span> <span class="nn">rich.logging</span> <span class="kn">import</span> <span class="n">RichHandler</span>
+<span class="kn">from</span> <span class="nn">rich.syntax</span> <span class="kn">import</span> <span class="n">Syntax</span>
+<span class="kn">from</span> <span class="nn">rich.console</span> <span class="kn">import</span> <span class="n">Console</span>
+<span class="kn">from</span> <span class="nn">lark</span> <span class="kn">import</span> <span class="n">Lark</span>
+<span class="kn">from</span> <span class="nn">.config</span> <span class="kn">import</span> <span class="p">(</span><span class="n">LIQUID_LOGGER_NAME</span><span class="p">,</span>
+                     <span class="n">LIQUID_EXC_MAX_STACKS</span><span class="p">,</span>
+                     <span class="n">LIQUID_EXC_CODE_CONTEXT</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">.exceptions</span> <span class="kn">import</span> <span class="n">LiquidNameError</span>
+
+<span class="n">TemplateMeta</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;TemplateMeta&#39;</span><span class="p">,</span>
+                          <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;path&#39;</span><span class="p">,</span> <span class="s1">&#39;stream&#39;</span><span class="p">,</span> <span class="s1">&#39;should_close&#39;</span><span class="p">])</span>
+
+<span class="k">class</span> <span class="nc">Nothing</span><span class="p">:</span><span id="liquid.utils.Nothing"></span><a class="mkapi-docs-link" title="liquid.utils.Nothing" href="../../liquid.utils/#liquid.utils.Nothing">DOCS</a>
+    <span class="c1"># pylint: disable=too-few-public-methods</span>
+    <span class="sd">&quot;&quot;&quot;A unique object to identify a NOTHING other than None</span>
+
+<span class="sd">    Lark transformers sometimes can pass None or nothing when no</span>
+<span class="sd">    terminals matched. To distinguish this situation, we need something</span>
+<span class="sd">    other than None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;NOTHING&#39;</span>
+
+<span class="n">NOTHING</span> <span class="o">=</span> <span class="n">Nothing</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">_PositionalTuple</span><span class="p">(</span><span class="nb">tuple</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">OptionalTags</span><span class="p">(</span><span class="n">_PositionalTuple</span><span class="p">):</span><span id="liquid.utils.OptionalTags"></span><a class="mkapi-docs-link" title="liquid.utils.OptionalTags" href="../../liquid.utils/#liquid.utils.OptionalTags">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Indicates the arguments are optional&quot;&quot;&quot;</span>
+
+<span class="k">class</span> <span class="nc">RequiredTags</span><span class="p">(</span><span class="n">_PositionalTuple</span><span class="p">):</span><span id="liquid.utils.RequiredTags"></span><a class="mkapi-docs-link" title="liquid.utils.RequiredTags" href="../../liquid.utils/#liquid.utils.RequiredTags">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Indicates the arguments are required&quot;&quot;&quot;</span>
+
+<span class="k">class</span> <span class="nc">Singleton</span><span class="p">:</span><span id="liquid.utils.Singleton"></span><a class="mkapi-docs-link" title="liquid.utils.Singleton" href="../../liquid.utils/#liquid.utils.Singleton">DOCS</a>
+    <span class="c1"># pylint: disable=too-few-public-methods</span>
+    <span class="sd">&quot;&quot;&quot;An abstract base class for signleton classes</span>
+
+<span class="sd">    To prevent the __init__ to run again for initialized object from __new__,</span>
+<span class="sd">    we have a property `_initialized` to inidicate whether the object has been</span>
+<span class="sd">    initialized already.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">INSTANCE</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: Optional[Type[Singleton]]</span>
+
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span> <span class="c1"># pylint: disable=unused-argument</span>
+        <span class="k">if</span> <span class="bp">cls</span><span class="o">.</span><span class="n">INSTANCE</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">INSTANCE</span> <span class="o">=</span> <span class="nb">object</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
+            <span class="bp">cls</span><span class="o">.</span><span class="n">INSTANCE</span><span class="o">.</span><span class="n">_initialized</span> <span class="o">=</span> <span class="kc">False</span>
+            <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">INSTANCE</span>
+        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">INSTANCE</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="c1"># pylint: disable=access-member-before-definition</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_initialized</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_initialized</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_init</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_init</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialize the object here&quot;&quot;&quot;</span>
+
+
+<span class="k">def</span> <span class="nf">template_meta</span><span class="p">(</span><span class="n">template</span><span class="p">):</span><span id="liquid.utils.template_meta"></span><a class="mkapi-docs-link" title="liquid.utils.template_meta" href="../../liquid.utils/#liquid.utils.template_meta">DOCS</a>
+    <span class="c1"># type: (Union[IO, str, Path]) -&gt; NamedTuple</span>
+    <span class="sd">&quot;&quot;&quot;Get the metadata of a template</span>
+
+<span class="sd">    This is to try to normalize the template for liquid into the name of</span>
+<span class="sd">    the template, the IO object and whether we should close that IO object.</span>
+
+<span class="sd">    The IO object should be closed when a valid path is passed.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        template: The template</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A tuple of the template name, the IO object and</span>
+<span class="sd">            whether we should close that IO object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: Optional[Path]</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">template</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+                <span class="k">raise</span> <span class="ne">OSError</span>
+        <span class="k">except</span> <span class="ne">OSError</span><span class="p">:</span>
+            <span class="c1"># filename too long or other OSError</span>
+            <span class="n">path</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">path</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">TemplateMeta</span><span class="p">(</span><span class="s1">&#39;&lt;string&gt;&#39;</span><span class="p">,</span>
+                                <span class="sa">f</span><span class="s1">&#39;&lt;string&gt; (</span><span class="si">{</span><span class="n">shorten</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span>
+                                <span class="n">StringIO</span><span class="p">(</span><span class="n">template</span><span class="p">),</span>
+                                <span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">TemplateMeta</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">stem</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">path</span><span class="o">.</span><span class="n">open</span><span class="p">(),</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">template</span><span class="p">,</span> <span class="n">Path</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">TemplateMeta</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">stem</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">template</span><span class="p">),</span> <span class="n">template</span><span class="o">.</span><span class="n">open</span><span class="p">(),</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># IO object</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;&lt;unknown&gt;&#39;</span> <span class="c1"># type: str</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">template</span><span class="o">.</span><span class="n">name</span>
+    <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+        <span class="k">pass</span>
+
+    <span class="k">return</span> <span class="n">TemplateMeta</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">template</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">check_name</span><span class="p">(</span><span class="n">names</span><span class="p">):</span><span id="liquid.utils.check_name"></span><a class="mkapi-docs-link" title="liquid.utils.check_name" href="../../liquid.utils/#liquid.utils.check_name">DOCS</a>
+    <span class="c1"># type: (Iterator[str]) -&gt; None</span>
+    <span class="sd">&quot;&quot;&quot;Check whether the name is allowed</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        LiquidNameError: when names contains name that is not allowed</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;__LIQUID&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">LiquidNameError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Name is preserved for liquid: </span><span class="si">{</span><span class="n">name</span><span class="si">!r}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">analyze_leading_spaces</span><span class="p">(</span><span class="n">string</span><span class="p">):</span><span id="liquid.utils.analyze_leading_spaces"></span><a class="mkapi-docs-link" title="liquid.utils.analyze_leading_spaces" href="../../liquid.utils/#liquid.utils.analyze_leading_spaces">DOCS</a>
+    <span class="c1"># type: (str) -&gt; Tuple[int, int]</span>
+    <span class="sd">&quot;&quot;&quot;Analyze the leading spaces of a string</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        string: The string to analyze</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        A tuple of two integers. Number of new lines and the number spaces</span>
+<span class="sd">        that last new line has</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">newline</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">last_nspaces</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">string</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">char</span><span class="o">.</span><span class="n">isspace</span><span class="p">():</span>
+            <span class="k">break</span>
+        <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
+            <span class="n">newline</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">last_nspaces</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">last_nspaces</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">newline</span><span class="p">,</span> <span class="n">last_nspaces</span>
+
+<span class="k">def</span> <span class="nf">shorten</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">placeholder</span><span class="o">=</span><span class="s1">&#39; ...&#39;</span><span class="p">):</span><span id="liquid.utils.shorten"></span><a class="mkapi-docs-link" title="liquid.utils.shorten" href="../../liquid.utils/#liquid.utils.shorten">DOCS</a>
+    <span class="c1"># type: (str, int, str) -&gt; str</span>
+    <span class="sd">&quot;&quot;&quot;Wrap textwrap.shorten</span>
+
+<span class="sd">    Since textwrap.shorten(&#39;abcdefg&#39;, 5, placeholder=&#39;.&#39;) will return &#39;.&#39;</span>
+<span class="sd">    But what we want is &#39;abcd.&#39;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">width</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">text</span>
+    <span class="n">string_to_check</span> <span class="o">=</span> <span class="n">text</span><span class="p">[:</span><span class="n">width</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">placeholder</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">char</span><span class="o">.</span><span class="n">isspace</span><span class="p">()</span> <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">string_to_check</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">tw_shorten</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">placeholder</span><span class="o">=</span><span class="n">placeholder</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">string_to_check</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">placeholder</span>
+
+<span class="k">def</span> <span class="nf">_exc_stack_code</span><span class="p">(</span><span class="n">context</span><span class="p">):</span>
+    <span class="c1"># type: (Diot) -&gt; str</span>
+    <span class="n">console</span> <span class="o">=</span> <span class="n">Console</span><span class="p">(</span><span class="n">file</span><span class="o">=</span><span class="n">StringIO</span><span class="p">())</span>
+    <span class="n">console</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">context</span><span class="o">.</span><span class="n">path</span><span class="si">!r}</span><span class="s2">, line </span><span class="si">{</span><span class="n">context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">, &quot;</span>
+                  <span class="sa">f</span><span class="s2">&quot;column </span><span class="si">{</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="n">stream</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">stream</span>
+    <span class="n">seekable</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">stream</span><span class="o">.</span><span class="n">closed</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">StringIO</span><span class="p">):</span>
+                <span class="n">stream</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">stream</span><span class="o">.</span><span class="n">getvalue</span><span class="p">())</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">stream</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">stream</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="n">seekable</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">seekable</span><span class="p">()</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">FileNotFoundError</span><span class="p">,</span> <span class="ne">IOError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">):</span>
+            <span class="n">seekable</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">seekable</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">seekable</span><span class="p">()</span>
+        <span class="k">except</span> <span class="p">(</span><span class="ne">AttributeError</span><span class="p">,</span> <span class="ne">ValueError</span><span class="p">,</span> <span class="ne">IOError</span><span class="p">):</span>
+            <span class="n">seekable</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">seekable</span><span class="p">:</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="s2">&quot;  [Stream not seekable]&quot;</span><span class="p">)</span> <span class="c1"># pragma: no cover</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">stream</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">line_range</span> <span class="o">=</span> <span class="p">(</span>
+            <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">-</span> <span class="n">LIQUID_EXC_CODE_CONTEXT</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="n">context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">+</span> <span class="n">LIQUID_EXC_CODE_CONTEXT</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="p">)</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="n">Syntax</span><span class="p">(</span><span class="n">stream</span><span class="o">.</span><span class="n">read</span><span class="p">(),</span>
+                      <span class="n">lexer_name</span><span class="o">=</span><span class="s1">&#39;liquid&#39;</span><span class="p">,</span>
+                      <span class="n">line_numbers</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                      <span class="n">line_range</span><span class="o">=</span><span class="n">line_range</span><span class="p">,</span>
+                      <span class="n">highlight_lines</span><span class="o">=</span><span class="p">{</span><span class="n">context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">+</span> <span class="mi">1</span><span class="p">})</span>
+        <span class="n">console</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">console</span><span class="o">.</span><span class="n">file</span><span class="o">.</span><span class="n">getvalue</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+<span class="k">def</span> <span class="nf">excmsg_with_context</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">parser</span><span class="p">):</span><span id="liquid.utils.excmsg_with_context"></span><a class="mkapi-docs-link" title="liquid.utils.excmsg_with_context" href="../../liquid.utils/#liquid.utils.excmsg_with_context">DOCS</a>
+    <span class="c1"># type: (str, Diot, Parser) -&gt; str</span>
+    <span class="sd">&quot;&quot;&quot;Assemble the exception message with context</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        context: The context</span>
+<span class="sd">        parser: The parser</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The assembled exception message</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">config</span> <span class="k">if</span> <span class="n">parser</span> <span class="k">else</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">context</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">config</span><span class="p">:</span> <span class="c1"># or not config.debug:</span>
+        <span class="k">return</span> <span class="n">msg</span>
+
+    <span class="n">stacks</span> <span class="o">=</span> <span class="p">[</span><span class="n">context</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">LIQUID_EXC_MAX_STACKS</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">parent</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parent</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">parent</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="n">stacks</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parent</span><span class="o">.</span><span class="n">context</span><span class="p">)</span>
+
+    <span class="n">msgs</span> <span class="o">=</span> <span class="p">[</span><span class="n">msg</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">stack</span> <span class="ow">in</span> <span class="n">stacks</span><span class="p">:</span>
+        <span class="n">msgs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_exc_stack_code</span><span class="p">(</span><span class="n">stack</span><span class="p">))</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">msgs</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_tag_parser</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">grammar</span><span class="p">,</span> <span class="n">transformer</span><span class="p">,</span> <span class="n">base_grammar</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span><span id="liquid.utils.get_tag_parser"></span><a class="mkapi-docs-link" title="liquid.utils.get_tag_parser" href="../../liquid.utils/#liquid.utils.get_tag_parser">DOCS</a>
+    <span class="c1"># type: (Union[str, Path], TagTransformer, str, Optional[Grammar]) -&gt; Lark</span>
+    <span class="sd">&quot;&quot;&quot;Get the lark parser for tags</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        start: The start rule name</span>
+<span class="sd">        grammar: The new grammar</span>
+<span class="sd">        transformer: The transformer for the parser</span>
+<span class="sd">        base_grammar: The base grammar</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The lark object for parsing</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">base_grammar</span> <span class="ow">and</span> <span class="n">grammar</span><span class="p">:</span>
+        <span class="n">lark_grammar</span> <span class="o">=</span> <span class="n">base_grammar</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">lark_grammar</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">grammar</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">base_grammar</span><span class="p">:</span>
+        <span class="n">lark_grammar</span> <span class="o">=</span> <span class="n">base_grammar</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+        <span class="kn">from</span> <span class="nn">.tags.grammar</span> <span class="kn">import</span> <span class="n">Grammar</span>
+        <span class="n">lark_grammar</span> <span class="o">=</span> <span class="n">Grammar</span><span class="p">(</span><span class="n">grammar</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">Lark</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">lark_grammar</span><span class="p">),</span>
+                <span class="n">parser</span><span class="o">=</span><span class="s1">&#39;lalr&#39;</span><span class="p">,</span>
+                <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span>
+                <span class="n">debug</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">maybe_placeholders</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="c1"># pylint: disable=not-callable</span>
+                <span class="n">transformer</span><span class="o">=</span><span class="n">transformer</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">find_template</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">curr_path</span><span class="p">,</span> <span class="n">config_paths</span><span class="p">):</span><span id="liquid.utils.find_template"></span><a class="mkapi-docs-link" title="liquid.utils.find_template" href="../../liquid.utils/#liquid.utils.find_template">DOCS</a>
+    <span class="c1"># type: (str, Optional[Union[str, Path]], List[Union[str, Path]])</span>
+    <span class="c1">#   -&gt; Optional[Path]</span>
+    <span class="sd">&quot;&quot;&quot;Find the template by given path</span>
+
+<span class="sd">    curr_path will always be the first one to look up. If it is None (template</span>
+<span class="sd">    from a string, for example), current working directory will be used.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        path: The path to look up</span>
+<span class="sd">        curr_path: The path where current template is located</span>
+<span class="sd">        config_paths: The paths from configuration</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The path found either directory.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">is_absolute</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">path</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">curr_path</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+        <span class="n">curr_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">curr_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">curr_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span>
+
+    <span class="n">config_paths</span> <span class="o">=</span> <span class="n">config_paths</span> <span class="o">+</span> <span class="p">[</span><span class="n">curr_path</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">cpath</span> <span class="ow">in</span> <span class="n">config_paths</span><span class="p">:</span>
+        <span class="n">thepath</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">cpath</span><span class="p">)</span> <span class="o">/</span> <span class="n">path</span>
+        <span class="k">if</span> <span class="n">thepath</span><span class="o">.</span><span class="n">is_file</span><span class="p">():</span>
+            <span class="k">return</span> <span class="n">thepath</span>
+    <span class="k">return</span> <span class="kc">None</span>
+
+<span class="k">def</span> <span class="nf">find_dir</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">curr_path</span><span class="p">):</span><span id="liquid.utils.find_dir"></span><a class="mkapi-docs-link" title="liquid.utils.find_dir" href="../../liquid.utils/#liquid.utils.find_dir">DOCS</a>
+    <span class="c1"># type: (str, Optional[Union[str, Path]]) -&gt; Optional[Path]</span>
+    <span class="sd">&quot;&quot;&quot;Find the directory by given path</span>
+
+<span class="sd">    If path is relative, find one relative to curr_path.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        path: The path to look up</span>
+<span class="sd">        curr_path: the path where current template is located</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        The directory found</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">is_absolute</span><span class="p">():</span>
+        <span class="k">return</span> <span class="n">path</span>
+
+    <span class="n">curr_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">curr_path</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="k">if</span> <span class="n">curr_path</span> <span class="k">else</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+
+    <span class="n">ret</span> <span class="o">=</span> <span class="n">curr_path</span> <span class="o">/</span> <span class="n">path</span>
+    <span class="k">return</span> <span class="n">ret</span> <span class="k">if</span> <span class="n">ret</span><span class="o">.</span><span class="n">is_dir</span><span class="p">()</span> <span class="k">else</span> <span class="kc">None</span>
+
+<span class="c1"># pylint: disable=invalid-name</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">LIQUID_LOGGER_NAME</span><span class="p">)</span>
+<span class="n">logger</span><span class="o">.</span><span class="n">addHandler</span><span class="p">(</span><span class="n">RichHandler</span><span class="p">(</span><span class="n">show_time</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">show_path</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+</code></pre></div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>

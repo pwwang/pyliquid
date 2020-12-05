@@ -1,0 +1,1489 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>liquid.filters - liquidpy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#liquidfilters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="liquidpy" class="md-header-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            liquidpy
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              liquid.filters
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="liquidpy" class="md-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    liquidpy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../additional_tags/" class="md-nav__link">
+      Additional Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags/" class="md-nav__link">
+      Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../filters/" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../extending/" class="md-nav__link">
+      Extending liquidpy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+    <label class="md-nav__link" for="nav-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" >
+    <label class="md-nav__link" for="nav-8-1">
+      liquid
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        liquid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid/" class="md-nav__link">
+      liquid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.parser/" class="md-nav__link">
+      liquid.parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.utils/" class="md-nav__link">
+      liquid.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.nodes/" class="md-nav__link">
+      liquid.nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.liquid/" class="md-nav__link">
+      liquid.liquid
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2" >
+    <label class="md-nav__link" for="nav-8-2">
+      liquid.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags/" class="md-nav__link">
+      liquid.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_when/" class="md-nav__link">
+      liquid.tags.tag_when
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_extends/" class="md-nav__link">
+      liquid.tags.tag_extends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_increment/" class="md-nav__link">
+      liquid.tags.tag_increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_comment/" class="md-nav__link">
+      liquid.tags.tag_comment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_block/" class="md-nav__link">
+      liquid.tags.tag_block
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_else/" class="md-nav__link">
+      liquid.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_elsif/" class="md-nav__link">
+      liquid.tags.tag_elsif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__literal/" class="md-nav__link">
+      liquid.tags.tag__literal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__end/" class="md-nav__link">
+      liquid.tags.tag__end
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_break/" class="md-nav__link">
+      liquid.tags.tag_break
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_continue/" class="md-nav__link">
+      liquid.tags.tag_continue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_include/" class="md-nav__link">
+      liquid.tags.tag_include
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_raw/" class="md-nav__link">
+      liquid.tags.tag_raw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__root/" class="md-nav__link">
+      liquid.tags.tag__root
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_capture/" class="md-nav__link">
+      liquid.tags.tag_capture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_unless/" class="md-nav__link">
+      liquid.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_cycle/" class="md-nav__link">
+      liquid.tags.tag_cycle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_if/" class="md-nav__link">
+      liquid.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_case/" class="md-nav__link">
+      liquid.tags.tag_case
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_for/" class="md-nav__link">
+      liquid.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_assign/" class="md-nav__link">
+      liquid.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_decrement/" class="md-nav__link">
+      liquid.tags.tag_decrement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_config/" class="md-nav__link">
+      liquid.tags.tag_config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.transformer/" class="md-nav__link">
+      liquid.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_tablerow/" class="md-nav__link">
+      liquid.tags.tag_tablerow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.manager/" class="md-nav__link">
+      liquid.tags.manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__output/" class="md-nav__link">
+      liquid.tags.tag__output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag/" class="md-nav__link">
+      liquid.tags.tag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.grammar/" class="md-nav__link">
+      liquid.tags.grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.config/" class="md-nav__link">
+      liquid.config
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" >
+    <label class="md-nav__link" for="nav-8-3">
+      liquid.python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python/" class="md-nav__link">
+      liquid.python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.parser/" class="md-nav__link">
+      liquid.python.parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" >
+    <label class="md-nav__link" for="nav-8-4">
+      liquid.python.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags/" class="md-nav__link">
+      liquid.python.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_while/" class="md-nav__link">
+      liquid.python.tags.tag_while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_python/" class="md-nav__link">
+      liquid.python.tags.tag_python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_else/" class="md-nav__link">
+      liquid.python.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_from/" class="md-nav__link">
+      liquid.python.tags.tag_from
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_unless/" class="md-nav__link">
+      liquid.python.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_if/" class="md-nav__link">
+      liquid.python.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_for/" class="md-nav__link">
+      liquid.python.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag__inherited/" class="md-nav__link">
+      liquid.python.tags.tag__inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_assign/" class="md-nav__link">
+      liquid.python.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_import/" class="md-nav__link">
+      liquid.python.tags.tag_import
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.inherited/" class="md-nav__link">
+      liquid.python.tags.inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.transformer/" class="md-nav__link">
+      liquid.python.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.filters/" class="md-nav__link">
+      liquid.python.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.filters/" class="md-nav__link">
+      liquid.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.exceptions/" class="md-nav__link">
+      liquid.exceptions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelog/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">liquid.</span><span class="mkapi-object-name">filters</span>
+<span id="liquid.filters"></span><a class="mkapi-docs-link" href="../../liquid.filters">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;The filters used in liquidpy</span>
+
+<span class="sd">Attributes:</span>
+<span class="sd">    filter_manager: The filter manager</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">html</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">Singleton</span>
+<span class="kn">from</span> <span class="nn">.exceptions</span> <span class="kn">import</span> <span class="n">LiquidFilterRegistryException</span>
+
+<span class="k">class</span> <span class="nc">FilterManager</span><span class="p">(</span><span class="n">Singleton</span><span class="p">):</span><span id="liquid.filters.FilterManager"></span><a class="mkapi-docs-link" title="liquid.filters.FilterManager" href="../../liquid.filters/#liquid.filters.FilterManager">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;A manager for filters</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        INSTANCE: The instance of the class, since it&#39;s a signleton</span>
+<span class="sd">        filters: The filters database</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">INSTANCE</span> <span class="o">=</span> <span class="kc">None</span>     <span class="c1"># type: FilterManager</span>
+    <span class="n">filters</span> <span class="o">=</span> <span class="p">{}</span>        <span class="c1"># type: Dict[str, Callable]</span>
+
+    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name_or_filter</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">):</span><span id="liquid.filters.FilterManager.register"></span><a class="mkapi-docs-link" title="liquid.filters.FilterManager.register" href="../../liquid.filters/#liquid.filters.FilterManager.register">DOCS</a>
+        <span class="c1"># type: (Optional[Union[str, Callable]], bool) -&gt; Optional[Callable]</span>
+        <span class="sd">&quot;&quot;&quot;Register a filter</span>
+
+<span class="sd">        This can be used as a decorator</span>
+<span class="sd">        &gt;&gt;&gt; @filter_manager.register</span>
+<span class="sd">        &gt;&gt;&gt; def add(a, b):</span>
+<span class="sd">        &gt;&gt;&gt;   return a+b</span>
+<span class="sd">        &gt;&gt;&gt; # register it with an alias:</span>
+<span class="sd">        &gt;&gt;&gt; @filter_manager.register(&#39;addfunc&#39;)</span>
+<span class="sd">        &gt;&gt;&gt; def add(a, b):</span>
+<span class="sd">        &gt;&gt;&gt;   return a+b</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name_or_filter: The filter to register</span>
+<span class="sd">                if name is given, will be treated as alias</span>
+<span class="sd">            mode: Whether do it for given mode</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The registered function or the decorator</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># if mode == &#39;jekyll&#39;:</span>
+        <span class="c1">#     from .jekyll.filter_manager import filter_manager as filtermgr</span>
+        <span class="c1">#     return filtermgr.register(name_or_filter)</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">.python.filters</span> <span class="kn">import</span> <span class="n">filter_manager</span> <span class="k">as</span> <span class="n">filtermgr</span>
+            <span class="k">return</span> <span class="n">filtermgr</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">name_or_filter</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">filterfunc</span><span class="p">):</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="n">filterfunc</span><span class="o">.</span><span class="vm">__name__</span>
+            <span class="n">name</span> <span class="o">=</span> <span class="p">[</span><span class="n">name</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="n">name_or_filter</span> <span class="ow">and</span> <span class="n">name_or_filter</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">filterfunc</span><span class="p">:</span>
+                <span class="n">names</span> <span class="o">=</span> <span class="n">name_or_filter</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+                    <span class="n">names</span> <span class="o">=</span> <span class="p">(</span><span class="n">nam</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">nam</span> <span class="ow">in</span> <span class="n">names</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+                <span class="n">name</span> <span class="o">=</span> <span class="n">names</span>
+            <span class="k">for</span> <span class="n">nam</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">filters</span><span class="p">[</span><span class="n">nam</span><span class="p">]</span> <span class="o">=</span> <span class="n">filterfunc</span>
+
+            <span class="k">return</span> <span class="n">filterfunc</span>
+
+        <span class="k">if</span> <span class="n">callable</span><span class="p">(</span><span class="n">name_or_filter</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">decorator</span><span class="p">(</span><span class="n">name_or_filter</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">decorator</span>
+
+    <span class="k">def</span> <span class="nf">unregister</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;standard&#39;</span><span class="p">):</span><span id="liquid.filters.FilterManager.unregister"></span><a class="mkapi-docs-link" title="liquid.filters.FilterManager.unregister" href="../../liquid.filters/#liquid.filters.FilterManager.unregister">DOCS</a>
+        <span class="c1"># type: (str, str) -&gt; Optional[Callable]</span>
+        <span class="sd">&quot;&quot;&quot;Unregister a filter</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            name: The name of the filter to unregister</span>
+<span class="sd">            mode: Whether do it for given mode</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The unregistered filter or None if name does not exist</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># if mode == &#39;jekyll&#39;:</span>
+        <span class="c1">#     from .jekyll.filter_manager import filter_manager as filtermgr</span>
+        <span class="c1">#     return filtermgr.unregister(name)</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;python&#39;</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">.python.filters</span> <span class="kn">import</span> <span class="n">filter_manager</span> <span class="k">as</span> <span class="n">filtermgr</span>
+            <span class="k">return</span> <span class="n">filtermgr</span><span class="o">.</span><span class="n">unregister</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">filters</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">LiquidFilterRegistryException</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s1">&#39;No such filter: </span><span class="si">{</span><span class="n">name</span><span class="si">!r}</span><span class="s1">&#39;</span>
+            <span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+
+<span class="c1"># pylint: disable=invalid-name</span>
+<span class="n">filter_manager</span> <span class="o">=</span> <span class="n">FilterManager</span><span class="p">()</span> <span class="c1"># type: FilterManager</span>
+
+
+<span class="k">class</span> <span class="nc">EmptyDrop</span><span class="p">:</span><span id="liquid.filters.EmptyDrop"></span><a class="mkapi-docs-link" title="liquid.filters.EmptyDrop" href="../../liquid.filters/#liquid.filters.EmptyDrop">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The EmptyDrop class borrowed from liquid&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;empty?&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="nb">bool</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__ne__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__eq__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__bool__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">_get_prop</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">prop</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the property of the object, allow via getitem&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">obj</span><span class="p">[</span><span class="n">prop</span><span class="p">]</span>
+    <span class="k">except</span> <span class="p">(</span><span class="ne">TypeError</span><span class="p">,</span> <span class="ne">KeyError</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span>
+
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">capitalize</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">abs</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">round</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;concat&#39;</span><span class="p">)(</span><span class="nb">list</span><span class="o">.</span><span class="fm">__add__</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;at_least&#39;</span><span class="p">)(</span><span class="nb">max</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;at_most&#39;</span><span class="p">)(</span><span class="nb">min</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;downcase&#39;</span><span class="p">)(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;upcase&#39;</span><span class="p">)(</span><span class="nb">str</span><span class="o">.</span><span class="n">upper</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">escape</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lstrip</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">rstrip</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">strip</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">replace</span><span class="p">)</span>
+<span class="n">filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;size&#39;</span><span class="p">)(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.split"></span><a class="mkapi-docs-link" title="liquid.filters.split" href="../../liquid.filters/#liquid.filters.split">DOCS</a>
+<span class="k">def</span> <span class="nf">split</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Split a string into a list</span>
+<span class="sd">    If the sep is empty, return the list of characters</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">sep</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">base</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">sep</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.append"></span><a class="mkapi-docs-link" title="liquid.filters.append" href="../../liquid.filters/#liquid.filters.append">DOCS</a>
+<span class="k">def</span> <span class="nf">append</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">suffix</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Append a suffix to a string&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base</span><span class="si">}{</span><span class="n">suffix</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.prepend"></span><a class="mkapi-docs-link" title="liquid.filters.prepend" href="../../liquid.filters/#liquid.filters.prepend">DOCS</a>
+<span class="k">def</span> <span class="nf">prepend</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">prefix</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Prepend a prefix to a string&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">prefix</span><span class="si">}{</span><span class="n">base</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.times"></span><a class="mkapi-docs-link" title="liquid.filters.times" href="../../liquid.filters/#liquid.filters.times">DOCS</a>
+<span class="k">def</span> <span class="nf">times</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implementation of * &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span> <span class="o">*</span> <span class="n">sep</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.minus"></span><a class="mkapi-docs-link" title="liquid.filters.minus" href="../../liquid.filters/#liquid.filters.minus">DOCS</a>
+<span class="k">def</span> <span class="nf">minus</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implementation of - &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span> <span class="o">-</span> <span class="n">sep</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.plus"></span><a class="mkapi-docs-link" title="liquid.filters.plus" href="../../liquid.filters/#liquid.filters.plus">DOCS</a>
+<span class="k">def</span> <span class="nf">plus</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implementation of + &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span> <span class="o">+</span> <span class="n">sep</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.modulo"></span><a class="mkapi-docs-link" title="liquid.filters.modulo" href="../../liquid.filters/#liquid.filters.modulo">DOCS</a>
+<span class="k">def</span> <span class="nf">modulo</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implementation of % &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span> <span class="o">%</span> <span class="n">sep</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.ceil"></span><a class="mkapi-docs-link" title="liquid.filters.ceil" href="../../liquid.filters/#liquid.filters.ceil">DOCS</a>
+<span class="k">def</span> <span class="nf">ceil</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the ceil of a number&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">base</span><span class="p">))</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.floor"></span><a class="mkapi-docs-link" title="liquid.filters.floor" href="../../liquid.filters/#liquid.filters.floor">DOCS</a>
+<span class="k">def</span> <span class="nf">floor</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the floor of a number&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">base</span><span class="p">))</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">)</span><span id="liquid.filters.liquid_date"></span><a class="mkapi-docs-link" title="liquid.filters.liquid_date" href="../../liquid.filters/#liquid.filters.liquid_date">DOCS</a>
+<span class="k">def</span> <span class="nf">liquid_date</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">fmt</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Format a date/datetime&quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+    <span class="k">if</span> <span class="n">base</span> <span class="o">==</span> <span class="s2">&quot;now&quot;</span><span class="p">:</span>
+        <span class="n">dtime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">base</span> <span class="o">==</span> <span class="s2">&quot;today&quot;</span><span class="p">:</span>
+        <span class="n">dtime</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">parser</span>
+        <span class="n">dtime</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dtime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="n">fmt</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.default"></span><a class="mkapi-docs-link" title="liquid.filters.default" href="../../liquid.filters/#liquid.filters.default">DOCS</a>
+<span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">deft</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the deft value if base is not set.</span>
+<span class="sd">    Otherwise, return base&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">base</span> <span class="o">==</span> <span class="mf">0.0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">base</span>
+    <span class="k">return</span> <span class="n">base</span> <span class="ow">or</span> <span class="n">deft</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.divided_by"></span><a class="mkapi-docs-link" title="liquid.filters.divided_by" href="../../liquid.filters/#liquid.filters.divided_by">DOCS</a>
+<span class="k">def</span> <span class="nf">divided_by</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">dvdby</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Implementation of / or // &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dvdby</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">base</span> <span class="o">//</span> <span class="n">dvdby</span>
+    <span class="k">return</span> <span class="n">base</span> <span class="o">/</span> <span class="n">dvdby</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.escape_once"></span><a class="mkapi-docs-link" title="liquid.filters.escape_once" href="../../liquid.filters/#liquid.filters.escape_once">DOCS</a>
+<span class="k">def</span> <span class="nf">escape_once</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Escapse html characters only once of the string&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">html</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="n">html</span><span class="o">.</span><span class="n">unescape</span><span class="p">(</span><span class="n">base</span><span class="p">))</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.newline_to_br"></span><a class="mkapi-docs-link" title="liquid.filters.newline_to_br" href="../../liquid.filters/#liquid.filters.newline_to_br">DOCS</a>
+<span class="k">def</span> <span class="nf">newline_to_br</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Replace newline with `&lt;br /&gt;`&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;br /&gt;&#39;</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.remove"></span><a class="mkapi-docs-link" title="liquid.filters.remove" href="../../liquid.filters/#liquid.filters.remove">DOCS</a>
+<span class="k">def</span> <span class="nf">remove</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Remove a substring from a string&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.remove_first"></span><a class="mkapi-docs-link" title="liquid.filters.remove_first" href="../../liquid.filters/#liquid.filters.remove_first">DOCS</a>
+<span class="k">def</span> <span class="nf">remove_first</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Remove the first substring from a string&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.replace_first"></span><a class="mkapi-docs-link" title="liquid.filters.replace_first" href="../../liquid.filters/#liquid.filters.replace_first">DOCS</a>
+<span class="k">def</span> <span class="nf">replace_first</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Replace the first substring with new string&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">old</span><span class="p">,</span> <span class="n">new</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.reverse"></span><a class="mkapi-docs-link" title="liquid.filters.reverse" href="../../liquid.filters/#liquid.filters.reverse">DOCS</a>
+<span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the reversed list&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">base</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">EmptyDrop</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">reversed</span><span class="p">(</span><span class="n">base</span><span class="p">))</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.sort"></span><a class="mkapi-docs-link" title="liquid.filters.sort" href="../../liquid.filters/#liquid.filters.sort">DOCS</a>
+<span class="k">def</span> <span class="nf">sort</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the sorted list&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">base</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">EmptyDrop</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">base</span><span class="p">))</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.sort_natural"></span><a class="mkapi-docs-link" title="liquid.filters.sort_natural" href="../../liquid.filters/#liquid.filters.sort_natural">DOCS</a>
+<span class="k">def</span> <span class="nf">sort_natural</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the sorted list in a case-insensitive manner&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">base</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">EmptyDrop</span><span class="p">()</span>
+    <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">str</span><span class="o">.</span><span class="n">casefold</span><span class="p">))</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;slice&#39;</span><span class="p">)</span><span id="liquid.filters.liquid_slice"></span><a class="mkapi-docs-link" title="liquid.filters.liquid_slice" href="../../liquid.filters/#liquid.filters.liquid_slice">DOCS</a>
+<span class="k">def</span> <span class="nf">liquid_slice</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Slice a list&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">base</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">EmptyDrop</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">start</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">start</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">base</span><span class="p">)</span> <span class="o">+</span> <span class="n">start</span>
+    <span class="k">return</span> <span class="n">base</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">start</span><span class="o">+</span><span class="n">length</span><span class="p">]</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.strip_html"></span><a class="mkapi-docs-link" title="liquid.filters.strip_html" href="../../liquid.filters/#liquid.filters.strip_html">DOCS</a>
+<span class="k">def</span> <span class="nf">strip_html</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Strip html tags from a string&quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">re</span>
+    <span class="c1"># use html parser?</span>
+    <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&lt;[^&gt;]+&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">base</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.strip_newlines"></span><a class="mkapi-docs-link" title="liquid.filters.strip_newlines" href="../../liquid.filters/#liquid.filters.strip_newlines">DOCS</a>
+<span class="k">def</span> <span class="nf">strip_newlines</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Strip newlines from a string&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">base</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.truncate"></span><a class="mkapi-docs-link" title="liquid.filters.truncate" href="../../liquid.filters/#liquid.filters.truncate">DOCS</a>
+<span class="k">def</span> <span class="nf">truncate</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">ellipsis</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Truncate a string&quot;&quot;&quot;</span>
+    <span class="n">lenbase</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">length</span> <span class="o">&gt;=</span> <span class="n">lenbase</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">base</span>
+
+    <span class="k">return</span> <span class="n">base</span><span class="p">[:</span><span class="n">length</span> <span class="o">-</span> <span class="nb">len</span><span class="p">(</span><span class="n">ellipsis</span><span class="p">)]</span> <span class="o">+</span> <span class="n">ellipsis</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.truncatewords"></span><a class="mkapi-docs-link" title="liquid.filters.truncatewords" href="../../liquid.filters/#liquid.filters.truncatewords">DOCS</a>
+<span class="k">def</span> <span class="nf">truncatewords</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">ellipsis</span><span class="o">=</span><span class="s2">&quot;...&quot;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Truncate a string by words&quot;&quot;&quot;</span>
+    <span class="c1"># do we need to preserve the whitespaces?</span>
+    <span class="n">baselist</span> <span class="o">=</span> <span class="n">base</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">lenbase</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">baselist</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">length</span> <span class="o">&gt;=</span> <span class="n">lenbase</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">base</span>
+
+    <span class="c1"># instead of collapsing them into just a single space?</span>
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">baselist</span><span class="p">[:</span><span class="n">length</span><span class="p">])</span> <span class="o">+</span> <span class="n">ellipsis</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.uniq"></span><a class="mkapi-docs-link" title="liquid.filters.uniq" href="../../liquid.filters/#liquid.filters.uniq">DOCS</a>
+<span class="k">def</span> <span class="nf">uniq</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the unique elements from a list&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">base</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">EmptyDrop</span><span class="p">()</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">bas</span> <span class="ow">in</span> <span class="n">base</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">bas</span> <span class="ow">in</span> <span class="n">ret</span><span class="p">:</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">bas</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ret</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.url_decode"></span><a class="mkapi-docs-link" title="liquid.filters.url_decode" href="../../liquid.filters/#liquid.filters.url_decode">DOCS</a>
+<span class="k">def</span> <span class="nf">url_decode</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Url-decode a string&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">unquote</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">unquote</span>
+    <span class="k">return</span> <span class="n">unquote</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.url_encode"></span><a class="mkapi-docs-link" title="liquid.filters.url_encode" href="../../liquid.filters/#liquid.filters.url_encode">DOCS</a>
+<span class="k">def</span> <span class="nf">url_encode</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Url-encode a string&quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlencode</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlencode</span>
+    <span class="k">return</span> <span class="n">urlencode</span><span class="p">({</span><span class="s1">&#39;&#39;</span><span class="p">:</span> <span class="n">base</span><span class="p">})[</span><span class="mi">1</span><span class="p">:]</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.where"></span><a class="mkapi-docs-link" title="liquid.filters.where" href="../../liquid.filters/#liquid.filters.where">DOCS</a>
+<span class="k">def</span> <span class="nf">where</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Query a list of objects with a given property value&quot;&quot;&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">[</span><span class="n">bas</span> <span class="k">for</span> <span class="n">bas</span> <span class="ow">in</span> <span class="n">base</span> <span class="k">if</span> <span class="n">_get_prop</span><span class="p">(</span><span class="n">bas</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span> <span class="o">==</span> <span class="n">value</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">ret</span> <span class="ow">or</span> <span class="n">EmptyDrop</span><span class="p">()</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;map&#39;</span><span class="p">)</span><span id="liquid.filters.liquid_map"></span><a class="mkapi-docs-link" title="liquid.filters.liquid_map" href="../../liquid.filters/#liquid.filters.liquid_map">DOCS</a>
+<span class="k">def</span> <span class="nf">liquid_map</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">prop</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Map a property to a list of objects&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">_get_prop</span><span class="p">(</span><span class="n">bas</span><span class="p">,</span> <span class="n">prop</span><span class="p">)</span> <span class="k">for</span> <span class="n">bas</span> <span class="ow">in</span> <span class="n">base</span><span class="p">]</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.join"></span><a class="mkapi-docs-link" title="liquid.filters.join" href="../../liquid.filters/#liquid.filters.join">DOCS</a>
+<span class="k">def</span> <span class="nf">join</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">sep</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Join a list by the sep&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">EmptyDrop</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">sep</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">base</span><span class="p">)</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.first"></span><a class="mkapi-docs-link" title="liquid.filters.first" href="../../liquid.filters/#liquid.filters.first">DOCS</a>
+<span class="k">def</span> <span class="nf">first</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the first element of the list&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">base</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">EmptyDrop</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">base</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.last"></span><a class="mkapi-docs-link" title="liquid.filters.last" href="../../liquid.filters/#liquid.filters.last">DOCS</a>
+<span class="k">def</span> <span class="nf">last</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Get the last element of the list&quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">base</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">EmptyDrop</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">base</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nd">@filter_manager</span><span class="o">.</span><span class="n">register</span><span id="liquid.filters.compact"></span><a class="mkapi-docs-link" title="liquid.filters.compact" href="../../liquid.filters/#liquid.filters.compact">DOCS</a>
+<span class="k">def</span> <span class="nf">compact</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Remove empties from a list&quot;&quot;&quot;</span>
+    <span class="n">ret</span> <span class="o">=</span> <span class="p">[</span><span class="n">bas</span> <span class="k">for</span> <span class="n">bas</span> <span class="ow">in</span> <span class="n">base</span> <span class="k">if</span> <span class="n">bas</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">ret</span> <span class="ow">or</span> <span class="n">EmptyDrop</span><span class="p">()</span>
+</code></pre></div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1449 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>Filters - liquidpy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#liquid-filters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="liquidpy" class="md-header-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            liquidpy
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Filters
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="liquidpy" class="md-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    liquidpy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../additional_tags/" class="md-nav__link">
+      Additional Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../tags/" class="md-nav__link">
+      Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Filters
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Filters
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#liquid-filters" class="md-nav__link">
+    Liquid filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-filters" class="md-nav__link">
+    Simple filters
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#render" class="md-nav__link">
+    render
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complex-filters" class="md-nav__link">
+    Complex filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dot-filtersattribute-filters" class="md-nav__link">
+    Dot filters/Attribute filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscript-filters" class="md-nav__link">
+    Subscript filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ternary-filters" class="md-nav__link">
+    Ternary filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambda-filters" class="md-nav__link">
+    Lambda filters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../extending/" class="md-nav__link">
+      Extending liquidpy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+    <label class="md-nav__link" for="nav-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" >
+    <label class="md-nav__link" for="nav-8-1">
+      liquid
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        liquid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid/" class="md-nav__link">
+      liquid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.parser/" class="md-nav__link">
+      liquid.parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.utils/" class="md-nav__link">
+      liquid.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.nodes/" class="md-nav__link">
+      liquid.nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.liquid/" class="md-nav__link">
+      liquid.liquid
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2" >
+    <label class="md-nav__link" for="nav-8-2">
+      liquid.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags/" class="md-nav__link">
+      liquid.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_when/" class="md-nav__link">
+      liquid.tags.tag_when
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_extends/" class="md-nav__link">
+      liquid.tags.tag_extends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_increment/" class="md-nav__link">
+      liquid.tags.tag_increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_comment/" class="md-nav__link">
+      liquid.tags.tag_comment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_block/" class="md-nav__link">
+      liquid.tags.tag_block
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_else/" class="md-nav__link">
+      liquid.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_elsif/" class="md-nav__link">
+      liquid.tags.tag_elsif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag__literal/" class="md-nav__link">
+      liquid.tags.tag__literal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag__end/" class="md-nav__link">
+      liquid.tags.tag__end
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_break/" class="md-nav__link">
+      liquid.tags.tag_break
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_continue/" class="md-nav__link">
+      liquid.tags.tag_continue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_include/" class="md-nav__link">
+      liquid.tags.tag_include
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_raw/" class="md-nav__link">
+      liquid.tags.tag_raw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag__root/" class="md-nav__link">
+      liquid.tags.tag__root
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_capture/" class="md-nav__link">
+      liquid.tags.tag_capture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_unless/" class="md-nav__link">
+      liquid.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_cycle/" class="md-nav__link">
+      liquid.tags.tag_cycle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_if/" class="md-nav__link">
+      liquid.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_case/" class="md-nav__link">
+      liquid.tags.tag_case
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_for/" class="md-nav__link">
+      liquid.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_assign/" class="md-nav__link">
+      liquid.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_decrement/" class="md-nav__link">
+      liquid.tags.tag_decrement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_config/" class="md-nav__link">
+      liquid.tags.tag_config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.transformer/" class="md-nav__link">
+      liquid.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag_tablerow/" class="md-nav__link">
+      liquid.tags.tag_tablerow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.manager/" class="md-nav__link">
+      liquid.tags.manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag__output/" class="md-nav__link">
+      liquid.tags.tag__output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.tag/" class="md-nav__link">
+      liquid.tags.tag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.tags.grammar/" class="md-nav__link">
+      liquid.tags.grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.config/" class="md-nav__link">
+      liquid.config
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" >
+    <label class="md-nav__link" for="nav-8-3">
+      liquid.python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python/" class="md-nav__link">
+      liquid.python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.parser/" class="md-nav__link">
+      liquid.python.parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" >
+    <label class="md-nav__link" for="nav-8-4">
+      liquid.python.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags/" class="md-nav__link">
+      liquid.python.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag_while/" class="md-nav__link">
+      liquid.python.tags.tag_while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag_python/" class="md-nav__link">
+      liquid.python.tags.tag_python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag_else/" class="md-nav__link">
+      liquid.python.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag_from/" class="md-nav__link">
+      liquid.python.tags.tag_from
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag_unless/" class="md-nav__link">
+      liquid.python.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag_if/" class="md-nav__link">
+      liquid.python.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag_for/" class="md-nav__link">
+      liquid.python.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag__inherited/" class="md-nav__link">
+      liquid.python.tags.tag__inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag_assign/" class="md-nav__link">
+      liquid.python.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.tag_import/" class="md-nav__link">
+      liquid.python.tags.tag_import
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.inherited/" class="md-nav__link">
+      liquid.python.tags.inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.tags.transformer/" class="md-nav__link">
+      liquid.python.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.python.filters/" class="md-nav__link">
+      liquid.python.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.filters/" class="md-nav__link">
+      liquid.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/liquid.exceptions/" class="md-nav__link">
+      liquid.exceptions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../changelog/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#liquid-filters" class="md-nav__link">
+    Liquid filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-filters" class="md-nav__link">
+    Simple filters
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#render" class="md-nav__link">
+    render
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complex-filters" class="md-nav__link">
+    Complex filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dot-filtersattribute-filters" class="md-nav__link">
+    Dot filters/Attribute filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subscript-filters" class="md-nav__link">
+    Subscript filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ternary-filters" class="md-nav__link">
+    Ternary filters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambda-filters" class="md-nav__link">
+    Lambda filters
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Filters</h1>
+                
+                <p>Filters in python mode are more flexible then the ones in standard mode:</p>
+<ul>
+<li>Base value does not have to be the first argument of the filter. One can use <code>_</code> as a placeholder for the base value</li>
+<li>Keyword arguments are allowed to call the filter</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">liquid</span> <span class="kn">import</span> <span class="n">filter_manager_python</span>
+
+<span class="nd">@filter_manager_python</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="s1">&#39;sum&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">filter_sum</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span>
+</code></pre></div>
+<p>To call it with base value as second argument:
+<div class="highlight"><pre><span></span><code><span class="p">{{</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">filter_sum</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span>_<span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="nf">{%</span><span class="w"> </span>comment<span class="w"> </span>%}<span class="w"> </span>//<span class="w"> </span><span class="mi">1</span><span class="w"> </span>+<span class="w"> </span><span class="mi">4</span><span class="w"> </span>+<span class="w"> </span><span class="na">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span>{%<span class="w"> </span>endcomment<span class="w"> </span>%}
+</code></pre></div></p>
+<p>To call it with keyword arguments:
+<div class="highlight"><pre><span></span><code><span class="p">{{</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">filter_sum</span><span class="p">:</span><span class="w"> </span><span class="na">b</span><span class="o">=</span><span class="mi">1</span><span class="w"> </span><span class="p">}}</span><span class="w"> </span><span class="nf">{%</span><span class="w"> </span>comment<span class="w"> </span>%}<span class="w"> </span>//<span class="w"> </span><span class="mi">4</span><span class="w"> </span>+<span class="w"> </span><span class="mi">1</span><span class="w"> </span>+<span class="w"> </span><span class="na">3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span>{%<span class="w"> </span>endcomment<span class="w"> </span>%}
+</code></pre></div></p>
+<h3 id="liquid-filters">Liquid filters</h3>
+<p><code>liquidpy</code> support all Liquid filters. However, for some of them, there is no EmptyDrop object returned. Instead, it returns the object, which is treated empty in python.</p>
+<p>For example:
+<div class="highlight"><pre><span></span><code><span class="n">Liquid</span><span class="p">(</span><span class="s1">&#39;{{ x | sort }}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[])</span>
+<span class="c1"># x will be an EmptyDrop object if rendered in standard mode, but</span>
+<span class="c1"># still [] if rendered in python mode</span>
+</code></pre></div></p>
+<h3 id="simple-filters">Simple filters</h3>
+<p>These filters are callable object from python builtins or defined in the template with a simple name.</p>
+<p>For example:
+<div class="highlight"><pre><span></span><code><span class="n">Liquid</span><span class="p">(</span><span class="s1">&#39;{{&quot;foo&quot; | len}}&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">()</span> <span class="c1"># // 3</span>
+</code></pre></div></p>
+<p>One can also pass in a filter:</p>
+<div class="highlight"><pre><span></span><code><span class="n">Liquid</span><span class="p">(</span><span class="s1">&#39;{{&quot;foo&quot; | concat}}&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+  <span class="n">concat</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="s1">&#39;bar&#39;</span>
+<span class="p">)</span> <span class="c1"># // foobar</span>
+</code></pre></div>
+<p>A filter can be even defined from inside the template:
+<div class="highlight"><pre><span></span><code><span class="n">Liquid</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">{</span><span class="si">%- a</span><span class="s2">ssign concat = lambda x: x + &#39;bar&#39; -%}</span>
+<span class="s2">{{ &quot;foo&quot; | concat }}&quot;&quot;&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">()</span> <span class="c1"># // foobar</span>
+</code></pre></div></p>
+<p>However, when you have a filter that is not with a simple name, for example, in a list, you have to use a complex filter.</p>
+<h4 id="render">render</h4>
+<p>This filter allows one to render a template in pythom mode from inside a template:
+<div class="highlight"><pre><span></span><code><span class="n">LiquidPython</span><span class="p">(</span><span class="s1">&#39;{{ tpl | render }}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+    <span class="n">tpl</span><span class="o">=</span><span class="s2">&quot;{{x}}&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span> <span class="c1"># // &#39;1&#39;</span>
+<span class="n">LiquidPython</span><span class="p">(</span><span class="s1">&#39;{{ tpl | render: x=2 }}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+    <span class="n">tpl</span><span class="o">=</span><span class="s2">&quot;{{x}}&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span> <span class="c1"># // &#39;2&#39;</span>
+</code></pre></div></p>
+<h3 id="complex-filters">Complex filters</h3>
+<p>They are nothing but just filters with a <code>@</code> modifier, when the filter needs to be computed (ie, an attribute of an object, an element of a list, etc):
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="n">Liquid</span><span class="p">(</span>
+  <span class="s1">&#39;{{ &quot;/path&quot; | @path.join: &quot;to&quot; }}&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">)</span> <span class="c1"># //  /path/to</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="n">filters</span> <span class="o">=</span> <span class="p">[</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">]</span>
+<span class="n">Liquid</span><span class="p">(</span>
+  <span class="s1">&#39;{{ &quot;/path&quot; | @filters[0]: &quot;to&quot; }}&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">filters</span><span class="o">=</span><span class="n">filters</span><span class="p">)</span> <span class="c1"># //  /path/to</span>
+</code></pre></div>
+<p>Since the base value from the output tag (<code>{{ ... }}</code>) can also be an iterable or a dictionary, we also support <code>*</code> and <code>**</code> modifiers for simple and complex filters to expand the values:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="n">Liquid</span><span class="p">(</span>
+  <span class="s1">&#39;{{ (&quot;/path&quot;, &quot;to&quot;) | *@path.join }}&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">)</span> <span class="c1"># //  /path/to</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">Liquid</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">  {</span><span class="si">% a</span><span class="s1">ssign add = lambda a, b: a + b %}</span>
+<span class="s1">  {{ {&quot;a&quot;: 1, &quot;b&quot;: 2} | **add }}</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">()</span> <span class="c1"># // 3</span>
+</code></pre></div>
+<p>For filters in standard mode, the single base value has to be passed as the first argument of the filter. However, in python mode, you can specify it explictly in a different position:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">path</span>
+<span class="n">Liquid</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">  {{ &quot;to&quot; | @path.join: &quot;/path&quot;, _ }}&#39;</span>
+<span class="s1">&#39;&#39;&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="n">path</span><span class="p">)</span> <span class="c1"># //  /path/to</span>
+</code></pre></div>
+<p>The underscore changes the position of the base value (<code>"to"</code>) from the first argument to the second. Without it, we will get <code>to//path</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The base value placeholder (<code>_</code>) doesn't work with expanding modifiers (<code>*</code>, <code>**</code>) when you have an iteratable value or a dictionary-like object as the base value.</p>
+</div>
+<h3 id="dot-filtersattribute-filters">Dot filters/Attribute filters</h3>
+<p>Sometimes, we also want to use the attribute of the base value as a filter, since it can be a callable too. For example:
+<div class="highlight"><pre><span></span><code><span class="n">Liquid</span><span class="p">(</span><span class="s1">&#39;{{ &quot;, &quot; | .join: [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;] }}&#39;</span><span class="p">,</span>
+       <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">()</span> <span class="c1"># // a, b, c</span>
+</code></pre></div></p>
+<p>You could even access some magic methods:
+<div class="highlight"><pre><span></span><code><span class="n">Liquid</span><span class="p">(</span><span class="s1">&#39;{{ &quot;foo&quot; | .__len__ }}&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">()</span>
+<span class="c1"># // 3</span>
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To get an attribute as a value from an object, you can use <code>getattr</code> filter:
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="n">LiquidPython</span><span class="p">(</span><span class="s1">&#39;{{ path | getattr: &quot;stem&quot;}}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+  <span class="n">path</span><span class="o">=</span><span class="n">Path</span><span class="p">(</span><span class="s1">&#39;a/b/c.txt&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="c1"># // c</span>
+</code></pre></div></p>
+</div>
+<h3 id="subscript-filters">Subscript filters</h3>
+<p>Similar to dot filters, sometimes, we also want to use the callables that are accessed by subscriptting the base value:
+<div class="highlight"><pre><span></span><code><span class="n">Liquid</span><span class="p">(</span><span class="s1">&#39;{{ base | [0] }}&#39;</span><span class="p">,</span>
+       <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+         <span class="n">base</span><span class="p">:</span> <span class="p">[</span><span class="k">lambda</span><span class="p">:</span> <span class="s1">&#39;Hello&#39;</span><span class="p">]</span>
+       <span class="p">)</span> <span class="c1"># // Hello</span>
+</code></pre></div></p>
+<p>To get the first element of the list:
+<div class="highlight"><pre><span></span><code><span class="n">Liquid</span><span class="p">(</span><span class="s1">&#39;{{ base | .__getitem__: 0 }}&#39;</span><span class="p">,</span>
+       <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+         <span class="n">base</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">]</span>
+       <span class="p">)</span> <span class="c1"># // Hello</span>
+</code></pre></div></p>
+<p>Or you can also use the shortcut:
+<div class="highlight"><pre><span></span><code><span class="n">LiquidPython</span><span class="p">(</span><span class="s1">&#39;{{ base | getitem: 0 }}&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+    <span class="n">base</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">]</span>
+<span class="p">)</span> <span class="c1"># // Hello</span>
+</code></pre></div></p>
+<h3 id="ternary-filters">Ternary filters</h3>
+<p>We also support ternary filters in python mode. The syntax is like:
+<div class="highlight"><pre><span></span><code><span class="p">{{</span><span class="w"> </span><span class="nv">base</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">[filter]</span><span class="w"> </span>?<span class="w"> </span>[filter<span class="p">|</span><span class="nf">constant]</span><span class="w"> </span>!<span class="w"> </span>[filter<span class="p">|</span><span class="nf">constant]</span><span class="w"> </span><span class="p">}}</span>
+{#        ^^^^^^^^   ^^^^^^^^^^^^^^^^^   ^^^^^^^^^^^^^^^^^ #}
+{#        part1      part2               part3             #}
+</code></pre></div></p>
+<p>You can use a filter for <code>part1</code> to modify the base value, which will then be the condition value for the ternary filter. <code>part2</code> could either be a filter to modify the base value when the condition value is True or just constant, including numbers, strings, None, True or False. It is the same for <code>part3</code> when condition value is False.</p>
+<p>All the three parts marked above are optional.
+When <code>part1</code> is not give, it will use the base value itself as the condition value. When <code>part2</code> is not given, it will return the base value, same for <code>part3</code>.</p>
+<p>So theoriatially, you can (but are not recommended to) write something like:
+<div class="highlight"><pre><span></span><code><span class="p">{{</span><span class="w"> </span><span class="nv">base</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">?</span><span class="w"> </span>!<span class="w"> </span><span class="p">}}</span>
+</code></pre></div>
+It basically means tell me if base is True or not. If it is True, return base value, and if it is False, return the base value, too.</p>
+<p>Arguments are supported for the filters, for example:</p>
+<div class="highlight"><pre><span></span><code><span class="n">tpl</span> <span class="o">=</span> <span class="s1">&#39;{{ base | isinstance: int ? | plus: 1 | append: &quot;.liquid&quot;}}&#39;</span>
+<span class="n">Liquid</span><span class="p">(</span><span class="n">tpl</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># // 2</span>
+<span class="n">Liquid</span><span class="p">(</span><span class="n">tpl</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">)</span> <span class="c1"># // 1.liquid</span>
+</code></pre></div>
+<h3 id="lambda-filters">Lambda filters</h3>
+<p>If all of the above filters don't meet your needs, you can also use lambda filters, which allow you to operate the base value pretty arbitrarily:</p>
+<div class="highlight"><pre><span></span><code><span class="n">tpl</span> <span class="o">=</span> <span class="s1">&#39;{{ base | lambda a: a ** 2 }}&#39;</span>
+<span class="n">Liquid</span><span class="p">(</span><span class="n">tpl</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;python&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># // 9</span>
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../tags/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tags
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../extending/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Extending liquidpy
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>

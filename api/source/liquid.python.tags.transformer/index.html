@@ -1,0 +1,1634 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>liquid.python.tags.transformer - liquidpy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#liquidpythontagstransformer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="liquidpy" class="md-header-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            liquidpy
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              liquid.python.tags.transformer
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="liquidpy" class="md-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    liquidpy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../additional_tags/" class="md-nav__link">
+      Additional Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags/" class="md-nav__link">
+      Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../filters/" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../extending/" class="md-nav__link">
+      Extending liquidpy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+    <label class="md-nav__link" for="nav-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" >
+    <label class="md-nav__link" for="nav-8-1">
+      liquid
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        liquid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid/" class="md-nav__link">
+      liquid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.parser/" class="md-nav__link">
+      liquid.parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.utils/" class="md-nav__link">
+      liquid.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.nodes/" class="md-nav__link">
+      liquid.nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.liquid/" class="md-nav__link">
+      liquid.liquid
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2" >
+    <label class="md-nav__link" for="nav-8-2">
+      liquid.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags/" class="md-nav__link">
+      liquid.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_when/" class="md-nav__link">
+      liquid.tags.tag_when
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_extends/" class="md-nav__link">
+      liquid.tags.tag_extends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_increment/" class="md-nav__link">
+      liquid.tags.tag_increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_comment/" class="md-nav__link">
+      liquid.tags.tag_comment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_block/" class="md-nav__link">
+      liquid.tags.tag_block
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_else/" class="md-nav__link">
+      liquid.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_elsif/" class="md-nav__link">
+      liquid.tags.tag_elsif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__literal/" class="md-nav__link">
+      liquid.tags.tag__literal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__end/" class="md-nav__link">
+      liquid.tags.tag__end
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_break/" class="md-nav__link">
+      liquid.tags.tag_break
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_continue/" class="md-nav__link">
+      liquid.tags.tag_continue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_include/" class="md-nav__link">
+      liquid.tags.tag_include
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_raw/" class="md-nav__link">
+      liquid.tags.tag_raw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__root/" class="md-nav__link">
+      liquid.tags.tag__root
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_capture/" class="md-nav__link">
+      liquid.tags.tag_capture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_unless/" class="md-nav__link">
+      liquid.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_cycle/" class="md-nav__link">
+      liquid.tags.tag_cycle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_if/" class="md-nav__link">
+      liquid.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_case/" class="md-nav__link">
+      liquid.tags.tag_case
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_for/" class="md-nav__link">
+      liquid.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_assign/" class="md-nav__link">
+      liquid.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_decrement/" class="md-nav__link">
+      liquid.tags.tag_decrement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_config/" class="md-nav__link">
+      liquid.tags.tag_config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.transformer/" class="md-nav__link">
+      liquid.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_tablerow/" class="md-nav__link">
+      liquid.tags.tag_tablerow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.manager/" class="md-nav__link">
+      liquid.tags.manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__output/" class="md-nav__link">
+      liquid.tags.tag__output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag/" class="md-nav__link">
+      liquid.tags.tag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.grammar/" class="md-nav__link">
+      liquid.tags.grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.config/" class="md-nav__link">
+      liquid.config
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" >
+    <label class="md-nav__link" for="nav-8-3">
+      liquid.python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python/" class="md-nav__link">
+      liquid.python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.parser/" class="md-nav__link">
+      liquid.python.parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" >
+    <label class="md-nav__link" for="nav-8-4">
+      liquid.python.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags/" class="md-nav__link">
+      liquid.python.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_while/" class="md-nav__link">
+      liquid.python.tags.tag_while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_python/" class="md-nav__link">
+      liquid.python.tags.tag_python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_else/" class="md-nav__link">
+      liquid.python.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_from/" class="md-nav__link">
+      liquid.python.tags.tag_from
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_unless/" class="md-nav__link">
+      liquid.python.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_if/" class="md-nav__link">
+      liquid.python.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_for/" class="md-nav__link">
+      liquid.python.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag__inherited/" class="md-nav__link">
+      liquid.python.tags.tag__inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_assign/" class="md-nav__link">
+      liquid.python.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_import/" class="md-nav__link">
+      liquid.python.tags.tag_import
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.inherited/" class="md-nav__link">
+      liquid.python.tags.inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.transformer/" class="md-nav__link">
+      liquid.python.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.filters/" class="md-nav__link">
+      liquid.python.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.filters/" class="md-nav__link">
+      liquid.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.exceptions/" class="md-nav__link">
+      liquid.exceptions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelog/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">liquid.python.tags.</span><span class="mkapi-object-name">transformer</span>
+<span id="liquid.python.tags.transformer"></span><a class="mkapi-docs-link" href="../../liquid.python.tags.transformer">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;The segments and transformer for liquidpy in python mode&quot;&quot;&quot;</span>
+<span class="c1"># pylint: disable=relative-beyond-top-level</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partialmethod</span>
+<span class="kn">from</span> <span class="nn">lark</span> <span class="kn">import</span> <span class="n">v_args</span><span class="p">,</span> <span class="n">Token</span>
+<span class="kn">from</span> <span class="nn">...config</span> <span class="kn">import</span> <span class="n">LIQUID_FILTERS_ENVNAME</span>
+<span class="kn">from</span> <span class="nn">...tags.transformer</span> <span class="kn">import</span> <span class="p">(</span>
+    <span class="n">render_segment</span><span class="p">,</span>
+    <span class="n">TagSegment</span><span class="p">,</span>
+    <span class="n">TagSegmentComparison</span><span class="p">,</span>
+    <span class="n">TagSegmentVar</span> <span class="k">as</span> <span class="n">TagSegmentVarStandard</span><span class="p">,</span>
+    <span class="n">TagTransformer</span> <span class="k">as</span> <span class="n">TagTransformerStandard</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">...utils</span> <span class="kn">import</span> <span class="n">NOTHING</span>
+<span class="kn">from</span> <span class="nn">...filters</span> <span class="kn">import</span> <span class="n">EmptyDrop</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentVar</span><span class="p">(</span><span class="n">TagSegmentVarStandard</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentVar"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentVar" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentVar">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Varaible segment in python mode. There will be no EmptyDrop object</span>
+<span class="sd">    as rendered&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentVar.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentVar.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentVar.render">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;Get the value of a variable from envs&quot;&quot;&quot;</span>
+        <span class="n">var</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">EmptyDrop</span><span class="p">):</span>
+            <span class="n">varname</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+            <span class="k">return</span> <span class="n">local_vars</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">varname</span><span class="p">,</span> <span class="n">global_vars</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">varname</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">var</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentIfelse</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentIfelse"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentIfelse" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentIfelse">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The ternary operation in python: `A if cond else B`&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentIfelse.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentIfelse.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentIfelse.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="c1"># pylint: disable=unused-argument</span>
+        <span class="sd">&quot;&quot;&quot;Render the segment with the given envs&quot;&quot;&quot;</span>
+        <span class="n">cond</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">cond</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentOr</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentOr"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentOr" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentOr">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Or statement in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentOr.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentOr.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentOr.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">data</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentAnd</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentAnd"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentAnd" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentAnd">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;And statement in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentAnd.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentAnd.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentAnd.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="n">lastdata</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">data</span>
+            <span class="n">lastdata</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="k">return</span> <span class="n">lastdata</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentNot</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentNot"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentNot" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentNot">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Not statement in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentNot.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentNot.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentNot.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentGetAttr</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentGetAttr"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentGetAttr" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentGetAttr">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Getattr operation in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentGetAttr.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentGetAttr.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentGetAttr.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="n">obj</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">obj</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
+            <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span><span class="o">.</span><span class="vm">__name__</span><span class="si">!r}</span><span class="s1"> object has &#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39;no attribute </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">!r}</span><span class="s1">&#39;</span>
+                <span class="p">)</span><span class="o">.</span><span class="n">with_traceback</span><span class="p">(</span><span class="n">exc</span><span class="o">.</span><span class="n">__traceback__</span><span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentGetItem</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentGetItem"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentGetItem" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentGetItem">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Getitem operation in python&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentGetItem.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentGetItem.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentGetItem.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)[</span>
+            <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="p">]</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentExpr</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentExpr"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentExpr" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentExpr">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Expressions in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentExpr.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentExpr.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentExpr.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="n">sign</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">:]:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;|&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">|=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;^&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">^=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;&amp;&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">&amp;=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;&lt;&lt;&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">&lt;&lt;=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;&gt;&gt;&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">&gt;&gt;=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;+&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">+=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">-=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;*&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">*=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;@&#39;</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+                <span class="n">ret</span> <span class="o">@=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;/&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">/=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;%&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">%=</span> <span class="n">data</span>
+            <span class="k">elif</span> <span class="n">sign</span> <span class="o">==</span> <span class="s1">&#39;//&#39;</span><span class="p">:</span>
+                <span class="n">ret</span> <span class="o">//=</span> <span class="n">data</span>
+
+        <span class="k">return</span> <span class="n">ret</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentPower</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentPower"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentPower" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentPower">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Power expression in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentPower.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentPower.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentPower.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="n">data1</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="n">data2</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">data1</span> <span class="o">**</span> <span class="n">data2</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentFactor</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentFactor"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentFactor" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentFactor">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Factor expression in python&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentFactor.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentFactor.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentFactor.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="n">factor_op</span><span class="p">,</span> <span class="n">factor</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">factor</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="n">factor</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">factor_op</span> <span class="o">==</span> <span class="s1">&#39;-&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">-</span><span class="n">factor</span>
+        <span class="k">if</span> <span class="n">factor_op</span> <span class="o">==</span> <span class="s1">&#39;~&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="o">~</span><span class="n">factor</span>
+        <span class="k">return</span> <span class="n">factor</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentFuncCall</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentFuncCall"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentFuncCall" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentFuncCall">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Function call in python</span>
+
+<span class="sd">    We simplified the function call in python, no start arguments (*args) nor</span>
+<span class="sd">    keyword arguments (**kwargs) allowed.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentFuncCall.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentFuncCall.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentFuncCall.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="n">func</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">func</span><span class="p">()</span>
+        <span class="n">args</span><span class="p">,</span> <span class="n">kwargs</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentTuple</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentTuple"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentTuple" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentTuple">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Tuple literals in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentTuple.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentTuple.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentTuple.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="n">NOTHING</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">()</span>
+        <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">render_segment</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+                     <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentList</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentList"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentList" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentList">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;List literals in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentList.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentList.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentList.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="n">NOTHING</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[]</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">render_segment</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentSet</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentSet"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentSet" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentSet">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Set literals in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentSet.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentSet.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentSet.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nb">set</span><span class="p">(</span><span class="n">render_segment</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+                   <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentDict</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentDict"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentDict" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentDict">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Dict literals in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentDict.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentDict.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentDict.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">render_segment</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span>
+            <span class="n">render_segment</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentSlice</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentSlice"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentSlice" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentSlice">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Slice objects in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentSlice.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentSlice.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentSlice.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">render_segment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">slice</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">render_segment</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+                       <span class="k">for</span> <span class="n">data</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">))</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentLambda</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentLambda"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentLambda" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentLambda">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Lambda objects in python&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentLambda.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentLambda.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentLambda.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="n">arglist</span><span class="p">,</span> <span class="n">body</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="n">al_args</span><span class="p">,</span> <span class="n">al_kwargs</span> <span class="o">=</span> <span class="n">arglist</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+            <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">,</span> <span class="n">as_is</span><span class="o">=</span><span class="kc">True</span>
+        <span class="p">)</span> <span class="k">if</span> <span class="n">arglist</span> <span class="k">else</span> <span class="p">([],</span> <span class="p">{})</span>
+        <span class="n">al_kwargs_keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">al_kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">len_al_args</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">al_args</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">lambdafunc</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">local_vars_inside</span> <span class="o">=</span> <span class="n">local_vars</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">local_vars_inside</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">al_kwargs</span><span class="p">)</span>
+            <span class="n">local_vars_inside</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len_al_args</span><span class="p">:</span>
+                    <span class="n">local_vars_inside</span><span class="p">[</span><span class="n">al_args</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">=</span> <span class="n">arg</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">key</span> <span class="o">=</span> <span class="n">al_kwargs_keys</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">len_al_args</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="p">:</span>
+                        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Argument </span><span class="si">{</span><span class="n">key</span><span class="si">!r}</span><span class="s1"> got multiple values&#39;</span><span class="p">)</span>
+                    <span class="n">local_vars_inside</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">arg</span>
+
+            <span class="k">return</span> <span class="n">render_segment</span><span class="p">(</span><span class="n">body</span><span class="p">,</span> <span class="n">local_vars_inside</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">lambdafunc</span>
+
+<span class="k">class</span> <span class="nc">TagSegmentFilter</span><span class="p">(</span><span class="n">TagSegment</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentFilter"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentFilter" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentFilter">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Filter segment&quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=no-self-use</span>
+    <span class="k">def</span> <span class="nf">_no_such_filter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name_token</span><span class="p">,</span> <span class="n">exc_wrapper</span><span class="o">=</span><span class="ne">KeyError</span><span class="p">):</span>
+        <span class="n">error</span> <span class="o">=</span> <span class="n">exc_wrapper</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No such filter: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">name_token</span><span class="p">)</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">lineno</span> <span class="o">=</span> <span class="n">name_token</span><span class="o">.</span><span class="n">line</span>
+            <span class="n">error</span><span class="o">.</span><span class="n">colno</span> <span class="o">=</span> <span class="n">name_token</span><span class="o">.</span><span class="n">column</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+        <span class="k">return</span> <span class="n">error</span>
+
+    <span class="k">def</span> <span class="nf">_get_filter_by_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">,</span>
+                            <span class="n">name_token</span><span class="p">,</span> <span class="nb">complex</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="c1"># pylint: disable=redefined-builtin</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">complex</span><span class="p">:</span>
+            <span class="n">filtname</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">name_token</span><span class="p">)</span>
+            <span class="n">filter_func</span> <span class="o">=</span> <span class="n">global_vars</span><span class="p">[</span><span class="n">LIQUID_FILTERS_ENVNAME</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                <span class="n">filtname</span><span class="p">,</span> <span class="n">local_vars</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+                    <span class="n">filtname</span><span class="p">,</span> <span class="n">global_vars</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">filtname</span><span class="p">,</span> <span class="n">NOTHING</span><span class="p">)</span>
+                <span class="p">)</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">filter_func</span> <span class="ow">is</span> <span class="n">NOTHING</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">_no_such_filter</span><span class="p">(</span><span class="n">name_token</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">filter_func</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">filter_func</span> <span class="o">=</span> <span class="n">render_segment</span><span class="p">(</span><span class="n">name_token</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">_no_such_filter</span><span class="p">(</span><span class="n">name_token</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">exc</span><span class="p">))</span> <span class="kn">from</span> <span class="bp">None</span>
+        <span class="k">return</span> <span class="n">filter_func</span>
+
+    <span class="k">def</span> <span class="nf">_render_lambda</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_render_ternary</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span>
+        <span class="c1"># ternary</span>
+        <span class="n">condfilter</span><span class="p">,</span> <span class="n">truth</span><span class="p">,</span> <span class="n">falsity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+
+        <span class="k">def</span> <span class="nf">filter_ternary</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+            <span class="n">cond</span> <span class="o">=</span> <span class="p">(</span><span class="n">condfilter</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)(</span><span class="n">base</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="n">condfilter</span>
+                    <span class="k">else</span> <span class="n">base</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cond</span><span class="p">:</span>
+                <span class="k">return</span> <span class="p">(</span><span class="n">truth</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)(</span><span class="n">base</span><span class="p">)</span>
+                        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">truth</span><span class="p">,</span> <span class="n">TagSegmentFilter</span><span class="p">)</span>
+                        <span class="k">else</span> <span class="n">base</span>
+                        <span class="k">if</span> <span class="n">truth</span> <span class="ow">is</span> <span class="kc">None</span>
+                        <span class="k">else</span> <span class="n">render_segment</span><span class="p">(</span><span class="n">truth</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">))</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">falsity</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)(</span><span class="n">base</span><span class="p">)</span>
+                    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">falsity</span><span class="p">,</span> <span class="n">TagSegmentFilter</span><span class="p">)</span>
+                    <span class="k">else</span> <span class="n">base</span>
+                    <span class="k">if</span> <span class="n">falsity</span> <span class="ow">is</span> <span class="kc">None</span>
+                    <span class="k">else</span> <span class="n">render_segment</span><span class="p">(</span><span class="n">falsity</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">filter_ternary</span>
+
+    <span class="k">def</span> <span class="nf">_render_normal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="c1"># pylint: disable=too-many-arguments</span>
+                       <span class="n">local_vars</span><span class="p">,</span>
+                       <span class="n">global_vars</span><span class="p">,</span>
+                       <span class="n">filter_name</span><span class="p">,</span>
+                       <span class="n">filter_arg</span><span class="p">,</span>
+                       <span class="n">filter_type</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">filter_arg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">filter_args</span><span class="p">,</span> <span class="n">filter_kwargs</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">{}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">local_vars_copy</span> <span class="o">=</span> <span class="n">local_vars</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">local_vars_copy</span><span class="p">[</span><span class="s1">&#39;_&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">NOTHING</span>
+            <span class="n">filter_args</span><span class="p">,</span> <span class="n">filter_kwargs</span> <span class="o">=</span> <span class="n">filter_arg</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+                <span class="n">local_vars_copy</span><span class="p">,</span> <span class="n">global_vars</span>
+            <span class="p">)</span>
+
+        <span class="n">filter_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_filter_by_name</span><span class="p">(</span>
+            <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">,</span> <span class="n">filter_name</span><span class="p">,</span> <span class="n">filter_type</span> <span class="o">==</span> <span class="s1">&#39;complex&#39;</span>
+        <span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">filter_function</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+            <span class="n">args</span> <span class="o">=</span> <span class="n">filter_args</span>
+            <span class="k">if</span> <span class="n">NOTHING</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+                <span class="n">args</span><span class="p">[</span><span class="n">args</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">NOTHING</span><span class="p">)]</span> <span class="o">=</span> <span class="n">base</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">args</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">base</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">filter_func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">filter_kwargs</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">filter_function</span>
+
+    <span class="k">def</span> <span class="nf">_render_other</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="c1"># pylint: disable=too-many-arguments</span>
+                      <span class="n">local_vars</span><span class="p">,</span>
+                      <span class="n">global_vars</span><span class="p">,</span>
+                      <span class="n">filter_name</span><span class="p">,</span>
+                      <span class="n">filter_arg</span><span class="p">,</span>
+                      <span class="n">filter_type</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">filter_arg</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">filter_args</span><span class="p">,</span> <span class="n">filter_kwargs</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">{}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">filter_args</span><span class="p">,</span> <span class="n">filter_kwargs</span> <span class="o">=</span> <span class="n">filter_arg</span><span class="o">.</span><span class="n">render</span><span class="p">(</span>
+                <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span>
+            <span class="p">)</span>
+        <span class="n">filtname</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">filter_name</span><span class="p">)</span>
+
+        <span class="k">def</span> <span class="nf">filter_function</span><span class="p">(</span><span class="n">base</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">filter_type</span> <span class="o">==</span> <span class="s1">&#39;dot&#39;</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">filter_func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">filtname</span><span class="p">)</span>
+                <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">_no_such_filter</span><span class="p">(</span>
+                        <span class="n">filter_name</span><span class="p">,</span> <span class="ne">AttributeError</span>
+                    <span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+                <span class="k">return</span> <span class="n">filter_func</span><span class="p">(</span><span class="o">*</span><span class="n">filter_args</span><span class="p">,</span> <span class="o">**</span><span class="n">filter_kwargs</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">filter_type</span> <span class="o">==</span> <span class="s1">&#39;subscript&#39;</span><span class="p">:</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">filter_func</span> <span class="o">=</span> <span class="n">base</span><span class="p">[</span><span class="n">filtname</span><span class="p">]</span>
+                <span class="k">except</span> <span class="p">(</span><span class="ne">KeyError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">)</span> <span class="k">as</span> <span class="n">exc</span><span class="p">:</span>
+                    <span class="k">raise</span> <span class="bp">self</span><span class="o">.</span><span class="n">_no_such_filter</span><span class="p">(</span>
+                        <span class="n">filter_name</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">exc</span><span class="p">)</span>
+                    <span class="p">)</span> <span class="kn">from</span> <span class="bp">None</span>
+
+                <span class="k">return</span> <span class="n">filter_func</span><span class="p">(</span><span class="o">*</span><span class="n">filter_args</span><span class="p">,</span> <span class="o">**</span><span class="n">filter_kwargs</span><span class="p">)</span>
+            <span class="c1"># start, keyword</span>
+            <span class="n">subtype</span> <span class="o">=</span> <span class="s1">&#39;normal&#39;</span>
+            <span class="n">subname</span> <span class="o">=</span> <span class="n">filter_name</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filter_name</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="n">subname</span><span class="p">,</span> <span class="n">subtype</span> <span class="o">=</span> <span class="n">filter_name</span>
+            <span class="n">filter_func</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_filter_by_name</span><span class="p">(</span>
+                <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">,</span> <span class="n">subname</span><span class="p">,</span> <span class="n">subtype</span> <span class="o">==</span> <span class="s1">&#39;complex&#39;</span>
+            <span class="p">)</span>
+            <span class="k">if</span> <span class="n">filter_type</span> <span class="o">==</span> <span class="s1">&#39;star&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">filter_func</span><span class="p">(</span><span class="o">*</span><span class="n">base</span><span class="p">,</span> <span class="o">*</span><span class="n">filter_args</span><span class="p">,</span> <span class="o">**</span><span class="n">filter_kwargs</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">filter_func</span><span class="p">(</span><span class="o">*</span><span class="n">filter_args</span><span class="p">,</span> <span class="o">**</span><span class="n">base</span><span class="p">,</span> <span class="o">**</span><span class="n">filter_kwargs</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">filter_function</span>
+
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagSegmentFilter.render"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagSegmentFilter.render" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagSegmentFilter.render">DOCS</a>
+        <span class="c1"># type: (dict, dict) -&gt; Any</span>
+        <span class="sd">&quot;&quot;&quot;render the segment&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># lambda</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render_lambda</span><span class="p">(</span><span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span> <span class="c1"># varname: arguments</span>
+            <span class="n">filter_name</span><span class="p">,</span> <span class="n">filter_arg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+            <span class="n">filter_type</span> <span class="o">=</span> <span class="s1">&#39;normal&#39;</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filter_name</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">):</span>
+                <span class="n">filter_name</span><span class="p">,</span> <span class="n">filter_type</span> <span class="o">=</span> <span class="n">filter_name</span>
+
+            <span class="k">if</span> <span class="n">filter_type</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;normal&#39;</span><span class="p">,</span> <span class="s1">&#39;complex&#39;</span><span class="p">):</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render_normal</span><span class="p">(</span><span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">,</span>
+                                           <span class="n">filter_name</span><span class="p">,</span> <span class="n">filter_arg</span><span class="p">,</span> <span class="n">filter_type</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render_other</span><span class="p">(</span><span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">,</span>
+                                      <span class="n">filter_name</span><span class="p">,</span> <span class="n">filter_arg</span><span class="p">,</span>
+                                      <span class="n">filter_type</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_render_ternary</span><span class="p">(</span><span class="n">local_vars</span><span class="p">,</span> <span class="n">global_vars</span><span class="p">)</span>
+
+<span class="nd">@v_args</span><span class="p">(</span><span class="n">inline</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">TagTransformer</span><span class="p">(</span><span class="n">TagTransformerStandard</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagTransformer"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagTransformer" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagTransformer">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;Transformer for python grammar&quot;&quot;&quot;</span>
+    <span class="c1"># pylint: disable=no-self-use</span>
+
+    <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">cond</span><span class="o">=</span><span class="n">NOTHING</span><span class="p">,</span> <span class="n">false_value</span><span class="o">=</span><span class="n">NOTHING</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagTransformer.test"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagTransformer.test" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagTransformer.test">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;The rule test: or_test (&quot;if&quot; or_test &quot;else&quot; test)? | lambdef&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">cond</span> <span class="ow">is</span> <span class="n">NOTHING</span> <span class="ow">and</span> <span class="n">false_value</span> <span class="ow">is</span> <span class="n">NOTHING</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">value</span>
+        <span class="k">return</span> <span class="n">TagSegmentIfelse</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">cond</span><span class="p">,</span> <span class="n">false_value</span><span class="p">)</span>
+
+    <span class="c1"># pylint: disable=signature-differs, arguments-differ</span>
+    <span class="k">def</span> <span class="nf">comparison</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">expr</span><span class="p">,</span> <span class="o">*</span><span class="n">op_and_exprs</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagTransformer.comparison"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagTransformer.comparison" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagTransformer.comparison">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;The rule comparison: expr (_comp_op expr)*&quot;&quot;&quot;</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="n">expr</span>
+        <span class="n">op</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">op_and_exprs</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">op_and_exprs</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">Token</span><span class="p">):</span>
+                <span class="n">op</span> <span class="o">+=</span> <span class="n">op_and_exprs</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">op_and_exprs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">Token</span><span class="p">):</span>
+                <span class="n">op</span> <span class="o">+=</span> <span class="n">op_and_exprs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">value</span>
+                <span class="n">expr2</span> <span class="o">=</span> <span class="n">op_and_exprs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">3</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">expr2</span> <span class="o">=</span> <span class="n">op_and_exprs</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span>
+
+            <span class="n">ret</span> <span class="o">=</span> <span class="n">TagSegmentComparison</span><span class="p">(</span><span class="n">ret</span><span class="p">,</span> <span class="n">op</span><span class="p">,</span> <span class="n">expr2</span><span class="p">)</span>
+            <span class="n">op</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">def</span> <span class="nf">term</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="o">*</span><span class="n">more</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagTransformer.term"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagTransformer.term" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagTransformer.term">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;The rule term: factor (_mul_op factor)*&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">more</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">one</span>
+        <span class="k">return</span> <span class="n">TagSegmentExpr</span><span class="p">(</span>
+            <span class="n">more</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">one</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">mor</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">mor</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">more</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">factor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">factor_op_or_power</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="n">NOTHING</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagTransformer.factor"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagTransformer.factor" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagTransformer.factor">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;The rule factor: _factor_op factor | power&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">factor</span> <span class="ow">is</span> <span class="n">NOTHING</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">factor_op_or_power</span>
+
+        <span class="k">return</span> <span class="n">TagSegmentFactor</span><span class="p">(</span><span class="n">factor_op_or_power</span><span class="p">,</span> <span class="n">factor</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">atom_expr</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="n">NOTHING</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagTransformer.power"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagTransformer.power" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagTransformer.power">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;The rule power: atom_expr (&quot;**&quot; factor)?&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">factor</span> <span class="ow">is</span> <span class="n">NOTHING</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">atom_expr</span>
+        <span class="k">return</span> <span class="n">TagSegmentPower</span><span class="p">(</span><span class="n">atom_expr</span><span class="p">,</span> <span class="n">factor</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">dictmarker</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">tests</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagTransformer.dictmarker"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagTransformer.dictmarker" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagTransformer.dictmarker">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;The dictmarker rule:</span>
+<span class="sd">        dictmarker: test &quot;:&quot; test (&quot;,&quot; test &quot;:&quot; test)* [&quot;,&quot;]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">ret</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tests</span><span class="p">),</span> <span class="mi">2</span><span class="p">):</span>
+            <span class="n">ret</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">tests</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">tests</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]))</span>
+        <span class="k">return</span> <span class="n">ret</span>
+
+    <span class="k">def</span> <span class="nf">atom_dict</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="n">NOTHING</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagTransformer.atom_dict"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagTransformer.atom_dict" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagTransformer.atom_dict">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;The rule atom_dict: &quot;{&quot; (dictmarker|testlist_comp)? &quot;}&quot; &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">marker</span> <span class="ow">is</span> <span class="n">NOTHING</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{}</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">marker</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">tuple</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">marker</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">TagSegmentDict</span><span class="p">(</span><span class="o">*</span><span class="n">marker</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">TagSegmentSet</span><span class="p">(</span><span class="o">*</span><span class="n">marker</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">atom_string</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">strings</span><span class="p">):</span><span id="liquid.python.tags.transformer.TagTransformer.atom_string"></span><a class="mkapi-docs-link" title="liquid.python.tags.transformer.TagTransformer.atom_string" href="../../liquid.python.tags.transformer/#liquid.python.tags.transformer.TagTransformer.atom_string">DOCS</a>
+        <span class="sd">&quot;&quot;&quot;The rule atom_string: string+ &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">strings</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_filter_type</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">var</span><span class="p">,</span> <span class="n">ftype</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">var</span><span class="p">,</span> <span class="n">ftype</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_one_or_more</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="o">*</span><span class="n">more</span><span class="p">,</span> <span class="n">sign</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">more</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">one</span>
+        <span class="k">if</span> <span class="n">sign</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">segment</span><span class="p">(</span><span class="n">one</span><span class="p">,</span> <span class="o">*</span><span class="n">more</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">segment</span><span class="p">(</span><span class="n">sign</span><span class="p">,</span> <span class="n">one</span><span class="p">,</span> <span class="o">*</span><span class="n">more</span><span class="p">)</span>
+
+    <span class="n">_passby</span> <span class="o">=</span> <span class="n">TagTransformerStandard</span><span class="o">.</span><span class="n">_passby</span>
+    <span class="n">_passby_segment</span> <span class="o">=</span> <span class="n">TagTransformerStandard</span><span class="o">.</span><span class="n">_passby_segment</span>
+    <span class="n">_passby_single_segment</span> <span class="o">=</span> <span class="n">TagTransformerStandard</span><span class="o">.</span><span class="n">_passby_single_segment</span>
+    <span class="n">or_test</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_one_or_more</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentOr</span><span class="p">)</span>
+    <span class="n">and_test</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_one_or_more</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentAnd</span><span class="p">)</span>
+    <span class="n">expr</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_one_or_more</span><span class="p">,</span> <span class="n">sign</span><span class="o">=</span><span class="s1">&#39;|&#39;</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentExpr</span><span class="p">)</span>
+    <span class="n">xor_expr</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_one_or_more</span><span class="p">,</span> <span class="n">sign</span><span class="o">=</span><span class="s1">&#39;^&#39;</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentExpr</span><span class="p">)</span>
+    <span class="n">and_expr</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_one_or_more</span><span class="p">,</span> <span class="n">sign</span><span class="o">=</span><span class="s1">&#39;&amp;&#39;</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentExpr</span><span class="p">)</span>
+    <span class="n">funccall</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentFuncCall</span><span class="p">)</span>
+    <span class="n">get_item</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentGetItem</span><span class="p">)</span>
+    <span class="n">get_attr</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentGetAttr</span><span class="p">)</span>
+    <span class="n">atom_tuple</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_single_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentTuple</span><span class="p">)</span>
+    <span class="n">atom_list</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_single_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentList</span><span class="p">)</span>
+    <span class="n">subscript</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentSlice</span><span class="p">)</span>
+    <span class="n">not_</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentNot</span><span class="p">)</span>
+    <span class="n">test_filter</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentFilter</span><span class="p">)</span>
+    <span class="n">lambdef</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentLambda</span><span class="p">)</span>
+    <span class="n">var</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_passby_segment</span><span class="p">,</span> <span class="n">segment</span><span class="o">=</span><span class="n">TagSegmentVar</span><span class="p">)</span>
+    <span class="n">shift_expr</span> <span class="o">=</span> <span class="n">arith_expr</span> <span class="o">=</span> <span class="n">term</span>
+    <span class="n">testlist_comp</span> <span class="o">=</span> <span class="n">_passby</span>
+    <span class="n">dot_filter</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_filter_type</span><span class="p">,</span> <span class="n">ftype</span><span class="o">=</span><span class="s1">&#39;dot&#39;</span><span class="p">)</span>
+    <span class="n">star_filter</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_filter_type</span><span class="p">,</span> <span class="n">ftype</span><span class="o">=</span><span class="s1">&#39;star&#39;</span><span class="p">)</span>
+    <span class="n">keyword_filter</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_filter_type</span><span class="p">,</span> <span class="n">ftype</span><span class="o">=</span><span class="s1">&#39;keyword&#39;</span><span class="p">)</span>
+    <span class="n">subscript_filter</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_filter_type</span><span class="p">,</span> <span class="n">ftype</span><span class="o">=</span><span class="s1">&#39;subscript&#39;</span><span class="p">)</span>
+    <span class="n">complex_filter</span> <span class="o">=</span> <span class="n">partialmethod</span><span class="p">(</span><span class="n">_filter_type</span><span class="p">,</span> <span class="n">ftype</span><span class="o">=</span><span class="s1">&#39;complex&#39;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>

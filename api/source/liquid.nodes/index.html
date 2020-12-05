@@ -1,0 +1,1544 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>liquid.nodes - liquidpy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#liquidnodes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="liquidpy" class="md-header-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            liquidpy
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              liquid.nodes
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="liquidpy" class="md-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    liquidpy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../additional_tags/" class="md-nav__link">
+      Additional Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../tags/" class="md-nav__link">
+      Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../filters/" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../extending/" class="md-nav__link">
+      Extending liquidpy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+    <label class="md-nav__link" for="nav-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" >
+    <label class="md-nav__link" for="nav-8-1">
+      liquid
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        liquid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid/" class="md-nav__link">
+      liquid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.parser/" class="md-nav__link">
+      liquid.parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.utils/" class="md-nav__link">
+      liquid.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.nodes/" class="md-nav__link">
+      liquid.nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.liquid/" class="md-nav__link">
+      liquid.liquid
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2" >
+    <label class="md-nav__link" for="nav-8-2">
+      liquid.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags/" class="md-nav__link">
+      liquid.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_when/" class="md-nav__link">
+      liquid.tags.tag_when
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_extends/" class="md-nav__link">
+      liquid.tags.tag_extends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_increment/" class="md-nav__link">
+      liquid.tags.tag_increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_comment/" class="md-nav__link">
+      liquid.tags.tag_comment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_block/" class="md-nav__link">
+      liquid.tags.tag_block
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_else/" class="md-nav__link">
+      liquid.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_elsif/" class="md-nav__link">
+      liquid.tags.tag_elsif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__literal/" class="md-nav__link">
+      liquid.tags.tag__literal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__end/" class="md-nav__link">
+      liquid.tags.tag__end
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_break/" class="md-nav__link">
+      liquid.tags.tag_break
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_continue/" class="md-nav__link">
+      liquid.tags.tag_continue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_include/" class="md-nav__link">
+      liquid.tags.tag_include
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_raw/" class="md-nav__link">
+      liquid.tags.tag_raw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__root/" class="md-nav__link">
+      liquid.tags.tag__root
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_capture/" class="md-nav__link">
+      liquid.tags.tag_capture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_unless/" class="md-nav__link">
+      liquid.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_cycle/" class="md-nav__link">
+      liquid.tags.tag_cycle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_if/" class="md-nav__link">
+      liquid.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_case/" class="md-nav__link">
+      liquid.tags.tag_case
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_for/" class="md-nav__link">
+      liquid.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_assign/" class="md-nav__link">
+      liquid.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_decrement/" class="md-nav__link">
+      liquid.tags.tag_decrement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_config/" class="md-nav__link">
+      liquid.tags.tag_config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.transformer/" class="md-nav__link">
+      liquid.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag_tablerow/" class="md-nav__link">
+      liquid.tags.tag_tablerow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.manager/" class="md-nav__link">
+      liquid.tags.manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag__output/" class="md-nav__link">
+      liquid.tags.tag__output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.tag/" class="md-nav__link">
+      liquid.tags.tag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.tags.grammar/" class="md-nav__link">
+      liquid.tags.grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.config/" class="md-nav__link">
+      liquid.config
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" >
+    <label class="md-nav__link" for="nav-8-3">
+      liquid.python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python/" class="md-nav__link">
+      liquid.python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.parser/" class="md-nav__link">
+      liquid.python.parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" >
+    <label class="md-nav__link" for="nav-8-4">
+      liquid.python.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags/" class="md-nav__link">
+      liquid.python.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_while/" class="md-nav__link">
+      liquid.python.tags.tag_while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_python/" class="md-nav__link">
+      liquid.python.tags.tag_python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_else/" class="md-nav__link">
+      liquid.python.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_from/" class="md-nav__link">
+      liquid.python.tags.tag_from
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_unless/" class="md-nav__link">
+      liquid.python.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_if/" class="md-nav__link">
+      liquid.python.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_for/" class="md-nav__link">
+      liquid.python.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag__inherited/" class="md-nav__link">
+      liquid.python.tags.tag__inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_assign/" class="md-nav__link">
+      liquid.python.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.tag_import/" class="md-nav__link">
+      liquid.python.tags.tag_import
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.inherited/" class="md-nav__link">
+      liquid.python.tags.inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.tags.transformer/" class="md-nav__link">
+      liquid.python.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.python.filters/" class="md-nav__link">
+      liquid.python.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.filters/" class="md-nav__link">
+      liquid.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../liquid.exceptions/" class="md-nav__link">
+      liquid.exceptions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../changelog/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <div class="mkapi-node">
+<h1 id="" class="mkapi-object mkapi-object-code plain">
+<span class="mkapi-object-kind mkapi-object-kind-code">SOURCE CODE</span>
+<span class="mkapi-object-prefix">liquid.</span><span class="mkapi-object-name">nodes</span>
+<span id="liquid.nodes"></span><a class="mkapi-docs-link" href="../../liquid.nodes">DOCS</a>
+</h1>
+
+<div class="mkapi-code">
+<div class="codehilite"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Definition of nodes and node scanner&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">.config</span> <span class="kn">import</span> <span class="n">LIQUID_LOG_INDENT</span>
+<span class="kn">from</span> <span class="nn">.tags</span> <span class="kn">import</span> <span class="n">tag_manager</span>
+<span class="kn">from</span> <span class="nn">.utils</span> <span class="kn">import</span> <span class="n">analyze_leading_spaces</span><span class="p">,</span> <span class="n">logger</span>
+<span class="kn">from</span> <span class="nn">.exceptions</span> <span class="kn">import</span> <span class="n">LiquidSyntaxError</span>
+
+<span class="k">class</span> <span class="nc">Node</span><span class="p">:</span><span id="liquid.nodes.Node"></span><a class="mkapi-docs-link" title="liquid.nodes.Node" href="../../liquid.nodes/#liquid.nodes.Node">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;A node of liquidpy</span>
+
+<span class="sd">    Serves as a bridge between parser and tags for scanning</span>
+<span class="sd">    Should be one of:</span>
+<span class="sd">    - literal node: ...</span>
+<span class="sd">    - output node: {{ ... }}</span>
+<span class="sd">    - comment node: {# ... #}</span>
+<span class="sd">    - tag node: {% ... %}</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        OPEN_TAG: The open tags for the node</span>
+<span class="sd">        CLOSE_TAG: The close tags for the node</span>
+<span class="sd">        TAG_MANAGER: The tag manager</span>
+<span class="sd">        name: The name of the node</span>
+
+<span class="sd">        open_compact: Whether open tag is compact</span>
+<span class="sd">        close_compact: Whether close tag is compact</span>
+<span class="sd">        content: The content of the node</span>
+<span class="sd">        context: The context of the node</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        content: The content of the node</span>
+<span class="sd">        context: The context of the node</span>
+<span class="sd">        parser: The parser</span>
+<span class="sd">        open_tag: The open tag of the node</span>
+<span class="sd">        close_tag: The close tag of the node</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">OPEN_TAG</span> <span class="o">=</span> <span class="p">()</span>  <span class="c1"># type: Tuple[str]</span>
+    <span class="n">CLOSE_TAG</span> <span class="o">=</span> <span class="p">()</span> <span class="c1"># type: Tuple[str]</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c1"># type: str</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;open_compact&#39;</span><span class="p">,</span> <span class="s1">&#39;close_compact&#39;</span><span class="p">,</span> <span class="s1">&#39;context&#39;</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">,</span> <span class="s1">&#39;_tag&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="c1"># pylint:disable=too-many-arguments</span>
+                 <span class="n">content</span><span class="p">,</span>
+                 <span class="n">context</span><span class="p">,</span>
+                 <span class="n">parser</span><span class="p">,</span>
+                 <span class="n">open_tag</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+                 <span class="n">close_tag</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="c1"># type: (str, str, str, Optional[Diot], &quot;Parser&quot;) -&gt; None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">open_compact</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span> <span class="ow">in</span> <span class="n">open_tag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">close_compact</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span> <span class="ow">in</span> <span class="n">close_tag</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">context</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_update_context</span><span class="p">(</span><span class="n">open_tag</span><span class="p">)</span>
+        <span class="n">tag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_tag</span><span class="p">(</span><span class="n">parser</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tag</span> <span class="o">=</span> <span class="n">tag</span>
+
+    <span class="k">def</span> <span class="nf">__init_subclass__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">tag_manager</span><span class="o">=</span><span class="n">tag_manager</span><span class="p">):</span><span id="liquid.nodes.Node.__init_subclass__"></span><a class="mkapi-docs-link" title="liquid.nodes.Node.__init_subclass__" href="../../liquid.nodes/#liquid.nodes.Node.__init_subclass__">DOCS</a>
+        <span class="c1"># pylint: disable=redefined-outer-name</span>
+        <span class="bp">cls</span><span class="o">.</span><span class="n">TAG_MANAGER</span> <span class="o">=</span> <span class="n">tag_manager</span>
+
+    <span class="nd">@property</span><span id="liquid.nodes.Node.tag"></span><a class="mkapi-docs-link" title="liquid.nodes.Node.tag" href="../../liquid.nodes/#liquid.nodes.Node.tag">DOCS</a>
+    <span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; &quot;Tag&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Get the tag from the node&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tag</span>
+
+    <span class="nd">@property</span><span id="liquid.nodes.Node.raw"></span><a class="mkapi-docs-link" title="liquid.nodes.Node.raw" href="../../liquid.nodes/#liquid.nodes.Node.raw">DOCS</a>
+    <span class="k">def</span> <span class="nf">raw</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># type: () -&gt; bool</span>
+        <span class="sd">&quot;&quot;&quot;Check whether this node is in raw mode&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">RAW</span>
+
+    <span class="k">def</span> <span class="nf">_update_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_tag</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Update the context to the start of the content&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_get_tag</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parser</span><span class="p">):</span>
+        <span class="c1"># type: (&quot;Parser&quot;) -&gt; &quot;Tag&quot;</span>
+        <span class="sd">&quot;&quot;&quot;Get the tag</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            parser: The parser</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            The tag that can is associated with this node</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">tag_class</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">TAG_MANAGER</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">tag_class</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tagname_line</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tagname_column</span> <span class="o">-</span> <span class="mi">1</span>
+            <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+                <span class="k">pass</span>
+            <span class="k">raise</span> <span class="n">LiquidSyntaxError</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;No such tag: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
+                                    <span class="n">parser</span><span class="p">)</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+        <span class="n">content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">content</span>
+        <span class="k">if</span> <span class="n">name</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;end&#39;</span><span class="p">):</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="n">name</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
+        <span class="k">return</span> <span class="n">tag_class</span><span class="p">(</span><span class="n">name</span><span class="p">,</span>
+                         <span class="n">content</span><span class="p">,</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="p">,</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">open_compact</span><span class="p">,</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">close_compact</span><span class="p">,</span>
+                         <span class="n">parser</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">NodeLiteral</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span><span id="liquid.nodes.NodeLiteral"></span><a class="mkapi-docs-link" title="liquid.nodes.NodeLiteral" href="../../liquid.nodes/#liquid.nodes.NodeLiteral">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The literal node&quot;&quot;&quot;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;LITERAL&quot;</span>
+
+<span class="k">class</span> <span class="nc">NodeOutput</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span><span id="liquid.nodes.NodeOutput"></span><a class="mkapi-docs-link" title="liquid.nodes.NodeOutput" href="../../liquid.nodes/#liquid.nodes.NodeOutput">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The output node&quot;&quot;&quot;</span>
+    <span class="n">OPEN_TAG</span> <span class="o">=</span> <span class="s1">&#39;{{&#39;</span><span class="p">,</span> <span class="s1">&#39;{{-&#39;</span>
+    <span class="n">CLOSE_TAG</span> <span class="o">=</span> <span class="s1">&#39;}}&#39;</span><span class="p">,</span> <span class="s1">&#39;-}}&#39;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;OUTPUT&quot;</span>
+
+    <span class="k">def</span> <span class="nf">_update_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_tag</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="n">open_tag</span><span class="p">)</span>
+        <span class="n">nnewline</span><span class="p">,</span> <span class="n">nspaces</span> <span class="o">=</span> <span class="n">analyze_leading_spaces</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">nnewline</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">+=</span> <span class="n">nnewline</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">=</span> <span class="n">nspaces</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">+=</span> <span class="n">nspaces</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">NodeTag</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span><span id="liquid.nodes.NodeTag"></span><a class="mkapi-docs-link" title="liquid.nodes.NodeTag" href="../../liquid.nodes/#liquid.nodes.NodeTag">DOCS</a>
+    <span class="sd">&quot;&quot;&quot;The opening of a tag node&quot;&quot;&quot;</span>
+    <span class="n">OPEN_TAG</span> <span class="o">=</span> <span class="s1">&#39;{%&#39;</span><span class="p">,</span> <span class="s1">&#39;{%-&#39;</span>
+    <span class="n">CLOSE_TAG</span> <span class="o">=</span> <span class="s1">&#39;%}&#39;</span><span class="p">,</span> <span class="s1">&#39;-%}&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tagname_line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tagname_column</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_update_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_tag</span><span class="p">):</span>
+        <span class="n">NodeOutput</span><span class="o">.</span><span class="n">_update_context</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">open_tag</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tagname_line</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">lineno</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_tagname_column</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span>
+        <span class="n">splits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">maxsplit</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># type: List[str]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">splits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>                           <span class="c1"># type: str</span>
+
+        <span class="n">content</span> <span class="o">=</span> <span class="n">splits</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">splits</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">+=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="n">n_newline</span><span class="p">,</span> <span class="n">n_spaces</span> <span class="o">=</span> <span class="n">analyze_leading_spaces</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">content</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">):]</span>
+        <span class="p">)</span>
+        <span class="k">if</span> <span class="n">n_newline</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">+=</span> <span class="n">n_newline</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">=</span> <span class="n">n_spaces</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">+=</span> <span class="n">n_spaces</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">content</span> <span class="o">=</span> <span class="n">content</span>
+
+<span class="k">class</span> <span class="nc">NodeScanner</span><span class="p">:</span><span id="liquid.nodes.NodeScanner"></span><a class="mkapi-docs-link" title="liquid.nodes.NodeScanner" href="../../liquid.nodes/#liquid.nodes.NodeScanner">DOCS</a>
+    <span class="c1"># pylint: disable=too-many-instance-attributes,too-few-public-methods</span>
+    <span class="sd">&quot;&quot;&quot;Scanning for the nodes</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        LITERAL: The literal node</span>
+<span class="sd">        NODES: The possible nodes</span>
+<span class="sd">        OPEN_CHARS: The start characters of open tags for those nodes</span>
+<span class="sd">            This is to speed up the lookup for a potential hit of a node</span>
+
+<span class="sd">        context: The context of the potential node</span>
+<span class="sd">        open_context: Where the open tag hits</span>
+<span class="sd">        hit: The node we hit</span>
+<span class="sd">            This will be only fit when there is only one type of node hit</span>
+<span class="sd">        literal_buffer: The buffer for literal nodes</span>
+<span class="sd">            This will not consume the potential node</span>
+<span class="sd">        opentag_buffer: The buffer for open tags</span>
+<span class="sd">        closetag_buffer: The buffer for close tags</span>
+<span class="sd">        content_buffer: The buffer for content of potential nodes</span>
+<span class="sd">        escape: Whether the previous character is an escape (`\\`)</span>
+<span class="sd">        rawtag: The matched raw tag name</span>
+<span class="sd">        parser: The parser</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="vm">__slots__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;context&#39;</span><span class="p">,</span> <span class="s1">&#39;open_context&#39;</span><span class="p">,</span> <span class="s1">&#39;hit&#39;</span><span class="p">,</span> <span class="s1">&#39;literal_buffer&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;opentag_buffer&#39;</span><span class="p">,</span> <span class="s1">&#39;content_buffer&#39;</span><span class="p">,</span> <span class="s1">&#39;closetag_buffer&#39;</span><span class="p">,</span>
+                 <span class="s1">&#39;escape&#39;</span><span class="p">,</span> <span class="s1">&#39;rawtag&#39;</span><span class="p">,</span> <span class="s1">&#39;parser&#39;</span><span class="p">)</span>
+
+
+    <span class="n">LITERAL</span> <span class="o">=</span> <span class="n">NodeLiteral</span>          <span class="c1"># type: NodeLiteral</span>
+    <span class="n">NODES</span> <span class="o">=</span> <span class="p">(</span><span class="n">NodeOutput</span><span class="p">,</span> <span class="n">NodeTag</span><span class="p">)</span>  <span class="c1"># type: Tuple[Type[Node]]</span>
+    <span class="n">OPEN_CHARS</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">tag</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">NODES</span>
+                     <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">OPEN_TAG</span><span class="p">)</span> <span class="c1"># type: Set[str]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">parser</span><span class="p">):</span>
+        <span class="c1"># type: (Diot, &quot;Parser&quot;) -&gt; None</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">context</span> <span class="o">=</span> <span class="n">context</span>      <span class="c1"># type: Diot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span> <span class="o">=</span> <span class="kc">None</span>    <span class="c1"># type: Diot</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hit</span> <span class="o">=</span> <span class="kc">None</span>             <span class="c1"># type: Optional[Node]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">literal_buffer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>    <span class="c1"># type: str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span> <span class="o">=</span> <span class="kc">None</span> <span class="c1"># type: str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_buffer</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># type: str</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">escape</span> <span class="o">=</span> <span class="kc">None</span>          <span class="c1"># type: bool</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rawtag</span> <span class="o">=</span> <span class="kc">None</span>          <span class="c1"># type: Optional[str]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parser</span> <span class="o">=</span> <span class="n">parser</span>        <span class="c1"># type: Parser</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_clear_state</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">_clear_state</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Clear the hit state.&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hit</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">content_buffer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+    <span class="k">def</span> <span class="nf">_summarize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Summarize the residue&quot;&quot;&quot;</span>
+
+        <span class="c1"># we don&#39;t have any node hit, summarize the literal</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="p">:</span>
+            <span class="c1"># context is mutable, have to copy it to keep current context</span>
+            <span class="n">literal</span> <span class="o">=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">literal_buffer</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span>
+                       <span class="k">if</span> <span class="n">end</span>
+                       <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">literal_buffer</span><span class="p">)</span> <span class="c1"># type: str</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">literal_buffer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+            <span class="k">if</span> <span class="n">literal</span><span class="p">:</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">LITERAL</span><span class="p">(</span><span class="n">literal</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[dim italic]</span><span class="si">%s</span><span class="s1">  Found </span><span class="si">%r</span><span class="s1">[/dim italic]&#39;</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="n">LIQUID_LOG_INDENT</span><span class="p">,</span>
+                             <span class="n">node</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span>
+                             <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;markup&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+                <span class="k">return</span> <span class="n">node</span>
+            <span class="k">return</span> <span class="ow">not</span> <span class="n">end</span>
+
+        <span class="c1"># We got a hit, if no closetag hit yet,</span>
+        <span class="c1"># we need to summarize previous literals</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">literal_buffer</span><span class="p">:</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">LITERAL</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">literal_buffer</span><span class="p">,</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span><span class="p">,</span>
+                                    <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">literal_buffer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[dim italic]</span><span class="si">%s</span><span class="s1">  Found </span><span class="si">%r</span><span class="s1">[/dim italic]&#39;</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="n">LIQUID_LOG_INDENT</span><span class="p">,</span>
+                             <span class="n">node</span><span class="o">.</span><span class="n">tag</span><span class="p">,</span>
+                             <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;markup&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span><span class="o">.</span><span class="n">colno</span> <span class="o">-=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span><span class="p">)</span>
+                <span class="k">return</span> <span class="n">node</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">end</span><span class="p">:</span>
+                <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="o">.</span><span class="n">CLOSE_TAG</span><span class="p">:</span>
+            <span class="c1"># let&#39;s see if we are inside a raw tag</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rawtag</span><span class="p">:</span>
+                <span class="c1"># NodeTag</span>
+                <span class="k">if</span> <span class="p">(</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="o">.</span><span class="n">name</span> <span class="ow">and</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">content_buffer</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;end&#39;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">rawtag</span><span class="p">):</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">rawtag</span> <span class="o">=</span> <span class="kc">None</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">literal_buffer</span> <span class="o">+=</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="o">+</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">content_buffer</span> <span class="o">+</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span><span class="p">)</span>
+                    <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[dim italic]</span><span class="si">%s</span><span class="s1">  Gave up </span><span class="si">%r</span><span class="s1"> (inside raw tag)&#39;</span>
+                                 <span class="s1">&#39;[/dim italic]&#39;</span><span class="p">,</span>
+                                 <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="n">LIQUID_LOG_INDENT</span><span class="p">,</span>
+                                 <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span>
+                                 <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;markup&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">_clear_state</span><span class="p">()</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">end</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="kc">True</span>
+
+            <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">content_buffer</span><span class="p">,</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span><span class="p">,</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="p">,</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span><span class="p">,</span>
+                            <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span><span class="p">)</span> <span class="c1"># type: Type[Node]</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">  Found </span><span class="si">%r</span><span class="s1">&#39;</span><span class="p">,</span>
+                         <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="n">LIQUID_LOG_INDENT</span><span class="p">,</span>
+                         <span class="n">node</span><span class="o">.</span><span class="n">tag</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">raw</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">rawtag</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">name</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_clear_state</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">node</span>
+
+        <span class="n">context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span>
+        <span class="k">raise</span> <span class="n">LiquidSyntaxError</span><span class="p">(</span>
+            <span class="sa">f</span><span class="s1">&#39;Unclosed node </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">context</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">, &#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;line </span><span class="si">{</span><span class="n">context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s1">, &#39;</span>
+            <span class="sa">f</span><span class="s1">&#39;column </span><span class="si">{</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">+</span> <span class="mi">1</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span>
+            <span class="n">context</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parser</span>
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_open_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">char</span><span class="p">):</span>
+        <span class="c1"># type: (str) -&gt; Optional[bool]</span>
+        <span class="sd">&quot;&quot;&quot;check if char is opening a node only when one definite</span>
+<span class="sd">        type of node hit&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="p">((</span><span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">char</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">OPEN_CHARS</span><span class="p">)</span> <span class="ow">or</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">content_buffer</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="n">opentag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="o">+</span> <span class="n">char</span> <span class="c1"># type: str</span>
+        <span class="c1"># See if we already have a hit, see if we hit &#39;-&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">opentag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="o">.</span><span class="n">OPEN_TAG</span>
+
+        <span class="n">potential_hits</span> <span class="o">=</span> <span class="p">[</span><span class="n">node</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">NODES</span>
+                          <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">tag</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">opentag</span><span class="p">)</span>
+                                 <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">node</span><span class="o">.</span><span class="n">OPEN_TAG</span><span class="p">)]</span>
+
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">potential_hits</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">hit</span> <span class="o">=</span> <span class="n">potential_hits</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">potential_hits</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_close_node</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">char</span><span class="p">):</span>
+        <span class="c1"># type: (str) -&gt; Optional[bool]</span>
+        <span class="sd">&quot;&quot;&quot;Check if a char is closing a node&quot;&quot;&quot;</span>
+
+        <span class="n">closetag</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span> <span class="o">+</span> <span class="n">char</span> <span class="c1"># type: str</span>
+        <span class="k">if</span> <span class="n">closetag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="o">.</span><span class="n">CLOSE_TAG</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">ctag</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">closetag</span><span class="p">)</span> <span class="k">for</span> <span class="n">ctag</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="o">.</span><span class="n">CLOSE_TAG</span><span class="p">):</span>
+            <span class="k">return</span> <span class="kc">None</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+    <span class="k">def</span> <span class="nf">_add_to_buffer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">char</span><span class="p">):</span>
+        <span class="c1"># type: (str) -&gt; Union[bool, Type[Node]]</span>
+        <span class="sd">&quot;&quot;&quot;Add character to buffer, and decide whether we should do a summary</span>
+<span class="sd">        on the state&quot;&quot;&quot;</span>
+        <span class="c1"># When should we do a summary:</span>
+        <span class="c1"># 1. When a potential hit is determined (ie `{%` hit)</span>
+        <span class="c1"># 2. When a hit closes (ie `%}` hit)</span>
+        <span class="c1"># 3. Stream end hit</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">:</span>
+            <span class="n">char</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="se">\\</span><span class="si">{</span><span class="n">char</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">escape</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="p">:</span>
+            <span class="n">opened</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open_node</span><span class="p">(</span><span class="n">char</span><span class="p">)</span> <span class="c1"># type: Optional[bool]</span>
+            <span class="k">if</span> <span class="n">opened</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span> <span class="c1"># pragma: no cover</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="o">+=</span> <span class="n">char</span>
+                <span class="n">ret</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_summarize</span><span class="p">()</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[dim italic]</span><span class="si">%s</span><span class="s1">  Opened potential node: </span><span class="si">%s</span><span class="s1"> &#39;</span>
+                             <span class="s1">&#39;(line: </span><span class="si">%s</span><span class="s1">, column: </span><span class="si">%s</span><span class="s1">)[/dim italic]&#39;</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="n">LIQUID_LOG_INDENT</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">hit</span><span class="o">.</span><span class="vm">__name__</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span><span class="o">.</span><span class="n">colno</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span>
+                             <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;markup&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+                <span class="k">return</span> <span class="n">ret</span>
+
+            <span class="k">if</span> <span class="n">opened</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">literal_buffer</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="o">+</span> <span class="n">char</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+            <span class="k">else</span><span class="p">:</span> <span class="c1"># hit potentially, multiple node types hit</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="o">+=</span> <span class="n">char</span>
+
+        <span class="k">elif</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open_node</span><span class="p">(</span><span class="n">char</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+            <span class="n">closed</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_close_node</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">closed</span> <span class="ow">is</span> <span class="kc">True</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span> <span class="o">+=</span> <span class="n">char</span>
+                <span class="n">node</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_summarize</span><span class="p">()</span>
+                <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+                    <span class="k">return</span> <span class="n">node</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">open_context</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;[dim italic]</span><span class="si">%s</span><span class="s1">  Closed node: </span><span class="si">%s</span><span class="s1">[/dim italic]&#39;</span><span class="p">,</span>
+                             <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">level</span> <span class="o">*</span> <span class="n">LIQUID_LOG_INDENT</span><span class="p">,</span>
+                             <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2">(</span><span class="si">{</span><span class="n">node</span><span class="o">.</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">)&quot;</span>
+                             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">NodeTag</span><span class="p">)</span>
+                             <span class="k">else</span> <span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+                             <span class="n">extra</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;markup&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">})</span>
+                <span class="k">return</span> <span class="n">node</span>
+
+            <span class="k">if</span> <span class="n">closed</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">content_buffer</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span> <span class="o">+</span> <span class="n">char</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+
+            <span class="k">else</span><span class="p">:</span> <span class="c1"># potentially closed</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">closetag_buffer</span> <span class="o">+=</span> <span class="n">char</span>
+
+        <span class="k">else</span><span class="p">:</span> <span class="c1"># we hit &#39;-&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">opentag_buffer</span> <span class="o">+=</span> <span class="n">char</span>
+        <span class="k">return</span> <span class="kc">True</span>
+
+    <span class="k">def</span> <span class="nf">consume</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">stream</span><span class="p">):</span><span id="liquid.nodes.NodeScanner.consume"></span><a class="mkapi-docs-link" title="liquid.nodes.NodeScanner.consume" href="../../liquid.nodes/#liquid.nodes.NodeScanner.consume">DOCS</a>
+        <span class="c1"># type: (IO) -&gt; Union[bool, Type[Node]]</span>
+        <span class="sd">&quot;&quot;&quot;Consume the character of a stream</span>
+
+<span class="sd">        if it is empty, then we hit the end of the stream.</span>
+<span class="sd">        Otherwise, we need to update the context, and add the character to the</span>
+<span class="sd">        buffer.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            stream: The stream to consume</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            True: we should continue consuming</span>
+<span class="sd">            False: we should stop consuming (we hit the end of the stream)</span>
+<span class="sd">            Node: A complete node hit</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">char</span> <span class="o">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c1"># type: str</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">char</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_summarize</span><span class="p">(</span><span class="n">end</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">lineno</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_to_buffer</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">escape</span> <span class="o">=</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">escape</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_to_buffer</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">colno</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_add_to_buffer</span><span class="p">(</span><span class="n">char</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div>
+</div>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>

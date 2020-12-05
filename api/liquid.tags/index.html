@@ -1,0 +1,2721 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.6">
+    
+    
+      
+        <title>liquid.tags - liquidpy</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6910b76c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#liquidtags" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="liquidpy" class="md-header-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            liquidpy
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              liquid.tags
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="liquidpy" class="md-nav__button md-logo" aria-label="liquidpy">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    liquidpy
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../intro/" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../additional_tags/" class="md-nav__link">
+      Additional Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../configuration/" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../tags/" class="md-nav__link">
+      Tags
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../filters/" class="md-nav__link">
+      Filters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../extending/" class="md-nav__link">
+      Extending liquidpy
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+    <label class="md-nav__link" for="nav-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-1" type="checkbox" id="nav-8-1" >
+    <label class="md-nav__link" for="nav-8-1">
+      liquid
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-1">
+        <span class="md-nav__icon md-icon"></span>
+        liquid
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid/" class="md-nav__link">
+      liquid
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.parser/" class="md-nav__link">
+      liquid.parser
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.utils/" class="md-nav__link">
+      liquid.utils
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.nodes/" class="md-nav__link">
+      liquid.nodes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.liquid/" class="md-nav__link">
+      liquid.liquid
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-2" type="checkbox" id="nav-8-2" checked>
+    <label class="md-nav__link" for="nav-8-2">
+      liquid.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-2">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        liquid.tags
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      liquid.tags
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#liquidtags" class="md-nav__link">
+    tags
+  </a>
+  
+    <nav class="md-nav" aria-label="tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_when" class="md-nav__link">
+    tag_when
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_extends" class="md-nav__link">
+    tag_extends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_increment" class="md-nav__link">
+    tag_increment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_comment" class="md-nav__link">
+    tag_comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_block" class="md-nav__link">
+    tag_block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_else" class="md-nav__link">
+    tag_else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_elsif" class="md-nav__link">
+    tag_elsif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag__literal" class="md-nav__link">
+    tag__literal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag__end" class="md-nav__link">
+    tag__end
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_break" class="md-nav__link">
+    tag_break
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_continue" class="md-nav__link">
+    tag_continue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_include" class="md-nav__link">
+    tag_include
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_raw" class="md-nav__link">
+    tag_raw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag__root" class="md-nav__link">
+    tag__root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_capture" class="md-nav__link">
+    tag_capture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_unless" class="md-nav__link">
+    tag_unless
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_cycle" class="md-nav__link">
+    tag_cycle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_if" class="md-nav__link">
+    tag_if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_case" class="md-nav__link">
+    tag_case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_for" class="md-nav__link">
+    tag_for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_assign" class="md-nav__link">
+    tag_assign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_decrement" class="md-nav__link">
+    tag_decrement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_config" class="md-nav__link">
+    tag_config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstransformer" class="md-nav__link">
+    transformer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_tablerow" class="md-nav__link">
+    tag_tablerow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagsmanager" class="md-nav__link">
+    manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag__output" class="md-nav__link">
+    tag__output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag" class="md-nav__link">
+    tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagsgrammar" class="md-nav__link">
+    grammar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_when/" class="md-nav__link">
+      liquid.tags.tag_when
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_extends/" class="md-nav__link">
+      liquid.tags.tag_extends
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_increment/" class="md-nav__link">
+      liquid.tags.tag_increment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_comment/" class="md-nav__link">
+      liquid.tags.tag_comment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_block/" class="md-nav__link">
+      liquid.tags.tag_block
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_else/" class="md-nav__link">
+      liquid.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_elsif/" class="md-nav__link">
+      liquid.tags.tag_elsif
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag__literal/" class="md-nav__link">
+      liquid.tags.tag__literal
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag__end/" class="md-nav__link">
+      liquid.tags.tag__end
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_break/" class="md-nav__link">
+      liquid.tags.tag_break
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_continue/" class="md-nav__link">
+      liquid.tags.tag_continue
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_include/" class="md-nav__link">
+      liquid.tags.tag_include
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_raw/" class="md-nav__link">
+      liquid.tags.tag_raw
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag__root/" class="md-nav__link">
+      liquid.tags.tag__root
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_capture/" class="md-nav__link">
+      liquid.tags.tag_capture
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_unless/" class="md-nav__link">
+      liquid.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_cycle/" class="md-nav__link">
+      liquid.tags.tag_cycle
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_if/" class="md-nav__link">
+      liquid.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_case/" class="md-nav__link">
+      liquid.tags.tag_case
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_for/" class="md-nav__link">
+      liquid.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_assign/" class="md-nav__link">
+      liquid.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_decrement/" class="md-nav__link">
+      liquid.tags.tag_decrement
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_config/" class="md-nav__link">
+      liquid.tags.tag_config
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.transformer/" class="md-nav__link">
+      liquid.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag_tablerow/" class="md-nav__link">
+      liquid.tags.tag_tablerow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.manager/" class="md-nav__link">
+      liquid.tags.manager
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag__output/" class="md-nav__link">
+      liquid.tags.tag__output
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.tag/" class="md-nav__link">
+      liquid.tags.tag
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.tags.grammar/" class="md-nav__link">
+      liquid.tags.grammar
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.config/" class="md-nav__link">
+      liquid.config
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-3" type="checkbox" id="nav-8-3" >
+    <label class="md-nav__link" for="nav-8-3">
+      liquid.python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-3">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python/" class="md-nav__link">
+      liquid.python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.parser/" class="md-nav__link">
+      liquid.python.parser
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8-4" type="checkbox" id="nav-8-4" >
+    <label class="md-nav__link" for="nav-8-4">
+      liquid.python.tags
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="liquid.python.tags" data-md-level="2">
+      <label class="md-nav__title" for="nav-8-4">
+        <span class="md-nav__icon md-icon"></span>
+        liquid.python.tags
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags/" class="md-nav__link">
+      liquid.python.tags
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag_while/" class="md-nav__link">
+      liquid.python.tags.tag_while
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag_python/" class="md-nav__link">
+      liquid.python.tags.tag_python
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag_else/" class="md-nav__link">
+      liquid.python.tags.tag_else
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag_from/" class="md-nav__link">
+      liquid.python.tags.tag_from
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag_unless/" class="md-nav__link">
+      liquid.python.tags.tag_unless
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag_if/" class="md-nav__link">
+      liquid.python.tags.tag_if
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag_for/" class="md-nav__link">
+      liquid.python.tags.tag_for
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag__inherited/" class="md-nav__link">
+      liquid.python.tags.tag__inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag_assign/" class="md-nav__link">
+      liquid.python.tags.tag_assign
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.tag_import/" class="md-nav__link">
+      liquid.python.tags.tag_import
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.inherited/" class="md-nav__link">
+      liquid.python.tags.inherited
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.tags.transformer/" class="md-nav__link">
+      liquid.python.tags.transformer
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.python.filters/" class="md-nav__link">
+      liquid.python.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.filters/" class="md-nav__link">
+      liquid.filters
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquid.exceptions/" class="md-nav__link">
+      liquid.exceptions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../changelog/" class="md-nav__link">
+      Change log
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#liquidtags" class="md-nav__link">
+    tags
+  </a>
+  
+    <nav class="md-nav" aria-label="tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_when" class="md-nav__link">
+    tag_when
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_extends" class="md-nav__link">
+    tag_extends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_increment" class="md-nav__link">
+    tag_increment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_comment" class="md-nav__link">
+    tag_comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_block" class="md-nav__link">
+    tag_block
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_else" class="md-nav__link">
+    tag_else
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_elsif" class="md-nav__link">
+    tag_elsif
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag__literal" class="md-nav__link">
+    tag__literal
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag__end" class="md-nav__link">
+    tag__end
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_break" class="md-nav__link">
+    tag_break
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_continue" class="md-nav__link">
+    tag_continue
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_include" class="md-nav__link">
+    tag_include
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_raw" class="md-nav__link">
+    tag_raw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag__root" class="md-nav__link">
+    tag__root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_capture" class="md-nav__link">
+    tag_capture
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_unless" class="md-nav__link">
+    tag_unless
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_cycle" class="md-nav__link">
+    tag_cycle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_if" class="md-nav__link">
+    tag_if
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_case" class="md-nav__link">
+    tag_case
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_for" class="md-nav__link">
+    tag_for
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_assign" class="md-nav__link">
+    tag_assign
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_decrement" class="md-nav__link">
+    tag_decrement
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_config" class="md-nav__link">
+    tag_config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstransformer" class="md-nav__link">
+    transformer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag_tablerow" class="md-nav__link">
+    tag_tablerow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagsmanager" class="md-nav__link">
+    manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag__output" class="md-nav__link">
+    tag__output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagstag" class="md-nav__link">
+    tag
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#liquidtagsgrammar" class="md-nav__link">
+    grammar
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>liquid.tags</h1>
+                
+                <div class="mkapi-node" id="liquid.tags">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object package plain top">
+    <div class="mkapi-object-kind package top">package</div>
+    <h2 id="liquidtags" class="mkapi-object-body package top"><span class="mkapi-object-prefix"><a href="../liquid/#liquid">liquid</a>.</span><span class="mkapi-object-name">tags</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags/#liquid.tags" title="Source for liquid.tags">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>All stuff about liquidpy tags</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_when">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_when" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_when">tag_when</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_when/#liquid.tags.tag_when" title="Source for liquid.tags.tag_when">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag when (in case)</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;cake&quot;</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">case</span><span class="w"> </span><span class="nv">handle</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="kr">when</span><span class="w"> </span><span class="s2">&quot;cake&quot;</span><span class="w"> </span><span class="p">%}</span>
+     This is a cake
+  <span class="p">{%</span><span class="w"> </span><span class="kr">when</span><span class="w"> </span><span class="s2">&quot;cookie&quot;</span><span class="w"> </span><span class="p">%}</span>
+     This is a cookie
+  <span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
+     This is not a cake nor a cookie
+<span class="p">{%</span><span class="w"> </span><span class="kr">endcase</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_when#liquid.tags.tag_when.TagWhen">TagWhen</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The when tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_when/#liquid.tags.tag_when.TagWhen" title="Source for liquid.tags.tag_when.TagWhen">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_extends">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_extends" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_extends">tag_extends</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_extends/#liquid.tags.tag_extends" title="Source for liquid.tags.tag_extends">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag extends</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">extends</span><span class="w"> </span>...<span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_extends#liquid.tags.tag_extends.TagExtends">TagExtends</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The extends tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_extends/#liquid.tags.tag_extends.TagExtends" title="Source for liquid.tags.tag_extends.TagExtends">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_increment">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_increment" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_increment">tag_increment</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_increment/#liquid.tags.tag_increment" title="Source for liquid.tags.tag_increment">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag increment</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">increment</span><span class="w"> </span>my_counter<span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">increment</span><span class="w"> </span>my_counter<span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">increment</span><span class="w"> </span>my_counter<span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_increment#liquid.tags.tag_increment.TagIncrement">TagIncrement</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The increment tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_increment/#liquid.tags.tag_increment.TagIncrement" title="Source for liquid.tags.tag_increment.TagIncrement">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_comment">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_comment" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_comment">tag_comment</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_comment/#liquid.tags.tag_comment" title="Source for liquid.tags.tag_comment">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag comment</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">comment</span><span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="nt">endcomment</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_comment#liquid.tags.tag_comment.TagComment">TagComment</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The comment tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_comment/#liquid.tags.tag_comment.TagComment" title="Source for liquid.tags.tag_comment.TagComment">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_block">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_block" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_block">tag_block</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_block/#liquid.tags.tag_block" title="Source for liquid.tags.tag_block">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag block</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">block</span><span class="w"> </span>block<span class="mi">1</span><span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="nt">endblock</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_block#liquid.tags.tag_block.TagBlock">TagBlock</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The block tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_block/#liquid.tags.tag_block.TagBlock" title="Source for liquid.tags.tag_block.TagBlock">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_else">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_else" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_else">tag_else</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_else/#liquid.tags.tag_else" title="Source for liquid.tags.tag_else">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Else tag in following situations</p>
+<div class="highlight"><pre><span></span><code>// in if
+<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">%}</span>
+...
+[<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">%}</span>]
+...
+<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+// in case / when
+<span class="p">{%</span><span class="w"> </span><span class="kr">case</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="p">%}</span>
+    <span class="p">{%</span><span class="w"> </span><span class="kr">when</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">%}</span>
+    ...
+    <span class="p">{%</span><span class="w"> </span><span class="kr">when</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">%}</span>
+    ...
+    <span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
+    ...
+<span class="p">{%</span><span class="w"> </span><span class="kr">endcase</span><span class="w"> </span><span class="p">%}</span>
+// in for
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>...<span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_else#liquid.tags.tag_else.TagElse">TagElse</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Class for tag else<a class="mkapi-src-link" href="../source/liquid.tags.tag_else/#liquid.tags.tag_else.TagElse" title="Source for liquid.tags.tag_else.TagElse">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_elsif">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_elsif" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_elsif">tag_elsif</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_elsif/#liquid.tags.tag_elsif" title="Source for liquid.tags.tag_elsif">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Elsif tag</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">%}</span>
+...
+[<span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>]
+...
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_elsif#liquid.tags.tag_elsif.TagElsif">TagElsif</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Class for tag elsif<a class="mkapi-src-link" href="../source/liquid.tags.tag_elsif/#liquid.tags.tag_elsif.TagElsif" title="Source for liquid.tags.tag_elsif.TagElsif">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag__literal">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag__literal" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag__literal">tag__literal</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag__literal/#liquid.tags.tag__literal" title="Source for liquid.tags.tag__literal">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The literal tag</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag__literal#liquid.tags.tag__literal.TagLITERAL">TagLITERAL</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The literal tag<a class="mkapi-src-link" href="../source/liquid.tags.tag__literal/#liquid.tags.tag__literal.TagLITERAL" title="Source for liquid.tags.tag__literal.TagLITERAL">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag__end">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag__end" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag__end">tag__end</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag__end/#liquid.tags.tag__end" title="Source for liquid.tags.tag__end">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The end tag</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">endxxx</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag__end#liquid.tags.tag__end.TagEND">TagEND</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">End tag: '{% endxxx %}'<a class="mkapi-src-link" href="../source/liquid.tags.tag__end/#liquid.tags.tag__end.TagEND" title="Source for liquid.tags.tag__end.TagEND">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_break">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_break" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_break">tag_break</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_break/#liquid.tags.tag_break" title="Source for liquid.tags.tag_break">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The break tag</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>...<span class="w"> </span><span class="p">%}</span>
+    <span class="p">{%</span><span class="w"> </span><span class="nt">break</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_break#liquid.tags.tag_break.TagBreak">TagBreak</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Class for tag break<a class="mkapi-src-link" href="../source/liquid.tags.tag_break/#liquid.tags.tag_break.TagBreak" title="Source for liquid.tags.tag_break.TagBreak">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_continue">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_continue" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_continue">tag_continue</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_continue/#liquid.tags.tag_continue" title="Source for liquid.tags.tag_continue">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The continue tag</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>...<span class="w"> </span><span class="p">%}</span>
+    <span class="p">{%</span><span class="w"> </span><span class="nt">continue</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_continue#liquid.tags.tag_continue.TagContinue">TagContinue</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Class for tag continue<a class="mkapi-src-link" href="../source/liquid.tags.tag_continue/#liquid.tags.tag_continue.TagContinue" title="Source for liquid.tags.tag_continue.TagContinue">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_include">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_include" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_include">tag_include</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_include/#liquid.tags.tag_include" title="Source for liquid.tags.tag_include">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag include</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span>...<span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_include#liquid.tags.tag_include.TagIncludeTransformer">TagIncludeTransformer</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The transformer for tag include<a class="mkapi-src-link" href="../source/liquid.tags.tag_include/#liquid.tags.tag_include.TagIncludeTransformer" title="Source for liquid.tags.tag_include.TagIncludeTransformer">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_include#liquid.tags.tag_include.TagInclude">TagInclude</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The extends tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_include/#liquid.tags.tag_include.TagInclude" title="Source for liquid.tags.tag_include.TagInclude">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_raw">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_raw" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_raw">tag_raw</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_raw/#liquid.tags.tag_raw" title="Source for liquid.tags.tag_raw">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag raw</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">raw</span><span class="w"> </span><span class="p">%}</span> ... <span class="p">{%</span><span class="w"> </span><span class="nt">endraw</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_raw#liquid.tags.tag_raw.TagRaw">TagRaw</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The raw tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_raw/#liquid.tags.tag_raw.TagRaw" title="Source for liquid.tags.tag_raw.TagRaw">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag__root">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag__root" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag__root">tag__root</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag__root/#liquid.tags.tag__root" title="Source for liquid.tags.tag__root">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The root tag</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag__root#liquid.tags.tag__root.TagROOT">TagROOT</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The root tag as a container of all child tags<a class="mkapi-src-link" href="../source/liquid.tags.tag__root/#liquid.tags.tag__root.TagROOT" title="Source for liquid.tags.tag__root.TagROOT">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_capture">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_capture" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_capture">tag_capture</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_capture/#liquid.tags.tag_capture" title="Source for liquid.tags.tag_capture">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag capture</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="nv">my_variable</span><span class="w"> </span><span class="p">%}</span>
+I am being captured.
+<span class="p">{%</span><span class="w"> </span><span class="nt">endcapture</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_capture#liquid.tags.tag_capture.TagCapture">TagCapture</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The capture tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_capture/#liquid.tags.tag_capture.TagCapture" title="Source for liquid.tags.tag_capture.TagCapture">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_unless">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_unless" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_unless">tag_unless</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_unless/#liquid.tags.tag_unless" title="Source for liquid.tags.tag_unless">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag unless</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="kr">unless</span><span class="w"> </span><span class="nv">condition</span><span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="kr">endunless</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_unless#liquid.tags.tag_unless.TagUnless">TagUnless</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The unless tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_unless/#liquid.tags.tag_unless.TagUnless" title="Source for liquid.tags.tag_unless.TagUnless">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_cycle">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_cycle" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_cycle">tag_cycle</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_cycle/#liquid.tags.tag_cycle" title="Source for liquid.tags.tag_cycle">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag cycle</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>&lt;loop&gt;<span class="w"> </span>&lt;args&gt;<span class="w"> </span><span class="p">%}</span>
+...
+    <span class="p">{%</span><span class="w"> </span><span class="nt">cycle</span><span class="w"> </span><span class="s2">&quot;one&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;two&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;three&quot;</span><span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_cycle#liquid.tags.tag_cycle.TagCycleTransformer">TagCycleTransformer</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The transformer for tag cycle<a class="mkapi-src-link" href="../source/liquid.tags.tag_cycle/#liquid.tags.tag_cycle.TagCycleTransformer" title="Source for liquid.tags.tag_cycle.TagCycleTransformer">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_cycle#liquid.tags.tag_cycle.TagCycle">TagCycle</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The cycle tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_cycle/#liquid.tags.tag_cycle.TagCycle" title="Source for liquid.tags.tag_cycle.TagCycle">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_if">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_if" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_if">tag_if</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_if/#liquid.tags.tag_if" title="Source for liquid.tags.tag_if">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag if</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">condition</span><span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_if#liquid.tags.tag_if.TagIf">TagIf</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Tag if<a class="mkapi-src-link" href="../source/liquid.tags.tag_if/#liquid.tags.tag_if.TagIf" title="Source for liquid.tags.tag_if.TagIf">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_case">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_case" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_case">tag_case</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_case/#liquid.tags.tag_case" title="Source for liquid.tags.tag_case">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag case</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;cake&quot;</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">case</span><span class="w"> </span><span class="nv">handle</span><span class="w"> </span><span class="p">%}</span>
+  <span class="p">{%</span><span class="w"> </span><span class="kr">when</span><span class="w"> </span><span class="s2">&quot;cake&quot;</span><span class="w"> </span><span class="p">%}</span>
+     This is a cake
+  <span class="p">{%</span><span class="w"> </span><span class="kr">when</span><span class="w"> </span><span class="s2">&quot;cookie&quot;</span><span class="w"> </span><span class="p">%}</span>
+     This is a cookie
+  <span class="p">{%</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">%}</span>
+     This is not a cake nor a cookie
+<span class="p">{%</span><span class="w"> </span><span class="kr">endcase</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_case#liquid.tags.tag_case.TagCase">TagCase</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The case class<a class="mkapi-src-link" href="../source/liquid.tags.tag_case/#liquid.tags.tag_case.TagCase" title="Source for liquid.tags.tag_case.TagCase">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_for">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_for" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_for">tag_for</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_for/#liquid.tags.tag_for" title="Source for liquid.tags.tag_for">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag for</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>&lt;loop&gt;<span class="w"> </span>&lt;args&gt;<span class="w"> </span><span class="p">%}</span>
+...
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_for#liquid.tags.tag_for.ForLoop">ForLoop</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">ForLoop(first, index, index0, last, length, rindex, rindex0)<a class="mkapi-src-link" href="../source/liquid.tags.tag_for/#liquid.tags.tag_for.ForLoop" title="Source for liquid.tags.tag_for.ForLoop">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_for#liquid.tags.tag_for.TagForTransformer">TagForTransformer</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The transformer for tag for<a class="mkapi-src-link" href="../source/liquid.tags.tag_for/#liquid.tags.tag_for.TagForTransformer" title="Source for liquid.tags.tag_for.TagForTransformer">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_for#liquid.tags.tag_for.TagFor">TagFor</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The for tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_for/#liquid.tags.tag_for.TagFor" title="Source for liquid.tags.tag_for.TagFor">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_assign">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_assign" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_assign">tag_assign</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_assign/#liquid.tags.tag_assign" title="Source for liquid.tags.tag_assign">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag assign</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>x<span class="w"> </span>|<span class="w"> </span><span class="na">plus</span><span class="o">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_assign#liquid.tags.tag_assign.TagAssignTransformer">TagAssignTransformer</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The transformer for tag assign<a class="mkapi-src-link" href="../source/liquid.tags.tag_assign/#liquid.tags.tag_assign.TagAssignTransformer" title="Source for liquid.tags.tag_assign.TagAssignTransformer">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_assign#liquid.tags.tag_assign.TagAssign">TagAssign</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The assign tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_assign/#liquid.tags.tag_assign.TagAssign" title="Source for liquid.tags.tag_assign.TagAssign">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_decrement">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_decrement" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_decrement">tag_decrement</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_decrement/#liquid.tags.tag_decrement" title="Source for liquid.tags.tag_decrement">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag decrement</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">decrement</span><span class="w"> </span>my_counter<span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">decrement</span><span class="w"> </span>my_counter<span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">decrement</span><span class="w"> </span>my_counter<span class="w"> </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_decrement#liquid.tags.tag_decrement.TagDecrement">TagDecrement</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The decrement tag'<a class="mkapi-src-link" href="../source/liquid.tags.tag_decrement/#liquid.tags.tag_decrement.TagDecrement" title="Source for liquid.tags.tag_decrement.TagDecrement">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_config">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_config" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_config">tag_config</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_config/#liquid.tags.tag_config" title="Source for liquid.tags.tag_config">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag config</p>
+<div class="highlight"><pre><span></span><code><span class="p">{%</span><span class="w"> </span><span class="nt">config</span><span class="w">  </span><span class="p">%}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_config#liquid.tags.tag_config.TagConfigTransformer">TagConfigTransformer</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The transformer for tag config<a class="mkapi-src-link" href="../source/liquid.tags.tag_config/#liquid.tags.tag_config.TagConfigTransformer" title="Source for liquid.tags.tag_config.TagConfigTransformer">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_config#liquid.tags.tag_config.TagConfig">TagConfig</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The config tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_config/#liquid.tags.tag_config.TagConfig" title="Source for liquid.tags.tag_config.TagConfig">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.transformer">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstransformer" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.transformer/#liquid.tags.transformer">transformer</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer" title="Source for liquid.tags.transformer">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The transformer for tag segments</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="abstract-class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegment">TagSegment</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">*data</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Base class for segment classes<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegment" title="Source for liquid.tags.transformer.TagSegment">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegmentVar">TagSegmentVar</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">segment for variables<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegmentVar" title="Source for liquid.tags.transformer.TagSegmentVar">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegmentComparison">TagSegmentComparison</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Comparison segment<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegmentComparison" title="Source for liquid.tags.transformer.TagSegmentComparison">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegmentGetItem">TagSegmentGetItem</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">segment for <code>obj[subscript]</code><a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegmentGetItem" title="Source for liquid.tags.transformer.TagSegmentGetItem">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegmentGetAttr">TagSegmentGetAttr</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">segment for <code>obj.attr</code><a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegmentGetAttr" title="Source for liquid.tags.transformer.TagSegmentGetAttr">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegmentRange">TagSegmentRange</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">segment for range<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegmentRange" title="Source for liquid.tags.transformer.TagSegmentRange">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegmentOutput">TagSegmentOutput</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Output inside {{ ... }}<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegmentOutput" title="Source for liquid.tags.transformer.TagSegmentOutput">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegmentArguments">TagSegmentArguments</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Arguments segment<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegmentArguments" title="Source for liquid.tags.transformer.TagSegmentArguments">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegmentLogical">TagSegmentLogical</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Logical segment<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegmentLogical" title="Source for liquid.tags.transformer.TagSegmentLogical">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagSegmentFilter">TagSegmentFilter</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Filter segment<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagSegmentFilter" title="Source for liquid.tags.transformer.TagSegmentFilter">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.TagTransformer">TagTransformer</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Transform tag segments<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.TagTransformer" title="Source for liquid.tags.transformer.TagTransformer">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
+        </div>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="../liquid.tags.transformer#liquid.tags.transformer.render_segment">render_segment</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">tagseg</code>, <code class="mkapi-object-signature">local_vars</code>, <code class="mkapi-object-signature">global_vars</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Try to render a segment<a class="mkapi-src-link" href="../source/liquid.tags.transformer/#liquid.tags.transformer.render_segment" title="Source for liquid.tags.transformer.render_segment">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag_tablerow">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag_tablerow" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag_tablerow">tag_tablerow</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag_tablerow/#liquid.tags.tag_tablerow" title="Source for liquid.tags.tag_tablerow">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tag tabrow</p>
+<div class="highlight"><pre><span></span><code>&lt;table&gt;
+<span class="p">{%</span><span class="w"> </span><span class="nt">tablerow</span><span class="w"> </span>product<span class="w"> </span>in<span class="w"> </span>collection.products<span class="w"> </span><span class="p">%}</span>
+  <span class="p">{{</span><span class="w"> </span><span class="nv">product</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endtablerow</span><span class="w"> </span><span class="p">%}</span>
+&lt;/table&gt;
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_tablerow#liquid.tags.tag_tablerow.TablerowObject">TablerowObject</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">TablerowObject(itername, obj, limit, offset, cols)<a class="mkapi-src-link" href="../source/liquid.tags.tag_tablerow/#liquid.tags.tag_tablerow.TablerowObject" title="Source for liquid.tags.tag_tablerow.TablerowObject">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_tablerow#liquid.tags.tag_tablerow.TagTablerowTransformer">TagTablerowTransformer</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The transformer for tablerow tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_tablerow/#liquid.tags.tag_tablerow.TagTablerowTransformer" title="Source for liquid.tags.tag_tablerow.TagTablerowTransformer">&lt;/&gt;</a></span></li>
+
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag_tablerow#liquid.tags.tag_tablerow.TagTablerow">TagTablerow</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The tablerow tag<a class="mkapi-src-link" href="../source/liquid.tags.tag_tablerow/#liquid.tags.tag_tablerow.TagTablerow" title="Source for liquid.tags.tag_tablerow.TagTablerow">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.manager">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagsmanager" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.manager/#liquid.tags.manager">manager</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.manager/#liquid.tags.manager" title="Source for liquid.tags.manager">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The tag manager</p></div>
+    </div>
+  <div class="mkapi-section attributes">
+      <div class="mkapi-section-name attributes">
+          <span class="mkapi-section-name-body attributes">Attributes</span> 
+        </div>
+      <div class="mkapi-section-body attributes"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">tag_manager</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The tag manager</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.manager#liquid.tags.manager.TagManager">TagManager</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The tag manager<a class="mkapi-src-link" href="../source/liquid.tags.manager/#liquid.tags.manager.TagManager" title="Source for liquid.tags.manager.TagManager">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag__output">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag__output" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag__output">tag__output</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag__output/#liquid.tags.tag__output" title="Source for liquid.tags.tag__output">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The output tag</p>
+<div class="highlight"><pre><span></span><code><span class="p">{{</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="p">}}</span>
+</code></pre></div></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag__output#liquid.tags.tag__output.TagOUTPUT">TagOUTPUT</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The output tag<a class="mkapi-src-link" href="../source/liquid.tags.tag__output/#liquid.tags.tag__output.TagOUTPUT" title="Source for liquid.tags.tag__output.TagOUTPUT">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.tag">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagstag" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.tag/#liquid.tags.tag">tag</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.tag/#liquid.tags.tag" title="Source for liquid.tags.tag">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Basics for all tags</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.tag#liquid.tags.tag.Tag">Tag</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The base class for all tags.<a class="mkapi-src-link" href="../source/liquid.tags.tag/#liquid.tags.tag.Tag" title="Source for liquid.tags.tag.Tag">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="liquid.tags.grammar">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h3 id="liquidtagsgrammar" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="#liquid.tags">liquid.tags</a>.</span><span class="mkapi-object-name"><a href="../liquid.tags.grammar/#liquid.tags.grammar">grammar</a></span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/liquid.tags.grammar/#liquid.tags.grammar" title="Source for liquid.tags.grammar">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Grammar utilities for lark grammar.</p>
+<p>Here we opens opptunities to operate the grammar, including
+add, remove and update</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="../liquid.tags.grammar#liquid.tags.grammar.Grammar">Grammar</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Manipulate lark grammar<a class="mkapi-src-link" href="../source/liquid.tags.grammar/#liquid.tags.grammar.Grammar" title="Source for liquid.tags.grammar.Grammar">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../liquid.liquid/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                liquid.liquid
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../liquid.tags.tag_when/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                liquid.tags.tag_when
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.fd16492e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.7836ba4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>
